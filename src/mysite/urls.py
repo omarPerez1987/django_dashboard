@@ -24,18 +24,19 @@ from dashboard.views.render_html import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('rooms/', rooms_list, name='index.html'),
-    path('rooms/<int:id>', room_view, name='room_view'),
-    path('bookings/', create_booking, name='bookings'),
-    # path('contacts/', contact_view, name='contact.html'),
-    # path('contacts/<int:id>', contact_create, name='contacts'),
+    path('home/', home_html, name='home'),
+    path('about/', about_html, name='about'),
 
-    # path('home/', render_html, name='index.html'),
-    # path('about/', render_html, name='about.html'),
-    # path('rooms/', render_html, name='rooms-grid.html'),
-    # path('rooms/<int:id>', room_view, name='rooms-details.html'),
-    # path('offers/', render_html, name='offers.html'),
-    path('contacts/', render_html, name='contacts.html'),
+
+    path('rooms/', rooms, name='rooms'),
+    # path('rooms_details/<int:id>/', room_view, name='room_view'),
+    path('rooms_details/', room_details_html, name='room_details'),
+    path('rooms_list/', room_listar, name='room_list'),
+    path('bookings/', create_booking, name='bookings'),
+    path('offers/', offers_html, name='offers'),
+
+    # path('contacts/', contact_view, name='contacts'),
+    path('contacts/', contact, name='contacts'),
 
 
 ]

@@ -21,3 +21,7 @@ def contact_view(request, id, template_name='contact.html'):
             return render(request, template_name, {'object':contact})
         except Exception as e:
             return render(request, template_name, {'error': str(e)})
+
+
+def contact(request):
+    return render(request, 'contact.html')

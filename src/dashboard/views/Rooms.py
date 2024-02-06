@@ -26,3 +26,17 @@ def room_view(request, id, template_name='rooms/room_view.html'):
         except Exception as e:
             return render(request, template_name, {'error': str(e)})
         
+
+def rooms(request):
+    return render(request, 'rooms-grid.html')
+
+
+def room_details_html(request):
+    return render(request, 'rooms-details.html')
+
+
+def offers_html(request):
+    return render(request, 'offers.html')
+
+def room_listar(request):
+    return render(request, 'rooms-list.html')

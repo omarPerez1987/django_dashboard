@@ -45,7 +45,7 @@
               id="btnFrame"
             />
           </button>
-          <a href="./index.html" class="header-box__header__left__logo">
+          <a href="{% url 'home' %}" class="header-box__header__left__logo">
             <h1 class="header-box__header__left__logo__H">H</h1>
             <h1 class="header-box__header__left__logo__name">
               Hotel <span>Miranda</span>
@@ -54,10 +54,10 @@
         </div>
 
         <nav class="navbar" id="navbar">
-          <a href="./about.html" class="navbar__links">About Us</a>
-          <a href="./rooms-grid.html" class="navbar__links">Rooms</a>
-          <a href="./offers.html" class="navbar__links">Offers</a>
-          <a href="./contact.html" class="navbar__links">Contact</a>
+          <a href="{% url 'about' %}" class="navbar__links">About Us</a>
+          <a href="{% url 'rooms' %}" class="navbar__links">Rooms</a>
+          <a href="{% url 'offers' %}" class="navbar__links">Offers</a>
+          <a href="{% url 'contacts' %}" class="navbar__links">Contact</a>
         </nav>
 
         <div class="header-box__header__icons">
@@ -82,7 +82,7 @@
         alt=""
       />
       <div class="main-about__box">
-        <a class="main-about__box__home" href="./index.html"
+        <a class="main-about__box__home" href="{% url 'home' %}"
           >Home | <span>Blog</span></a
         >
       </div>

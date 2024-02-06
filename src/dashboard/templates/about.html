@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +24,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
     <title>Hotel Miranda</title>
   </head>
 
@@ -32,10 +34,18 @@
       <header class="header-box__header">
         <div class="header-box__header__left">
           <button class="header-box__header__left__menu">
-            <img src="./public/icons/navbar/menu.svg" alt="" id="btnMenu" />
-            <img src="./public/icons/navbar/frame.svg" alt="" id="btnFrame" />
+            <img
+              src="{% static 'public/icons/navbar/menu.svg' %}"
+              alt=""
+              id="btnMenu"
+            />
+            <img
+              src="{% static 'public/icons/navbar/frame.svg' %}"
+              alt=""
+              id="btnFrame"
+            />
           </button>
-          <a href="./index.html" class="header-box__header__left__logo">
+          <a href="{% url 'home' %}" class="header-box__header__left__logo">
             <h1 class="header-box__header__left__logo__H">H</h1>
             <h1 class="header-box__header__left__logo__name">
               Hotel <span>Miranda</span>
@@ -44,19 +54,19 @@
         </div>
 
         <nav class="navbar" id="navbar">
-          <a href="./about.html" class="navbar__links">About Us</a>
-          <a href="./rooms-grid.html" class="navbar__links">Rooms</a>
-          <a href="./offers.html" class="navbar__links">Offers</a>
-          <a href="./contact.html" class="navbar__links">Contact</a>
+          <a href="{% url 'about' %}" class="navbar__links">About Us</a>
+          <a href="{% url 'rooms' %}" class="navbar__links">Rooms</a>
+          <a href="{% url 'offers' %}" class="navbar__links">Offers</a>
+          <a href="{% url 'contacts' %}" class="navbar__links">Contact</a>
         </nav>
 
         <div class="header-box__header__icons">
           <img
-            src="./public/icons/header/user.png"
+            src="{% static 'public/icons/header/user.png' %}"
             class="header-box__header__icons__icon"
           />
           <img
-            src="./public/icons/header/search.png"
+            src="{% static 'public/icons/header/search.png' %}"
             class="header-box__header__icons__icon"
           />
         </div>
@@ -68,11 +78,11 @@
       <h1 class="main-about__title">About Us</h1>
       <img
         class="main-about__img"
-        src="./public/images/contact/pexels-adrien-olichon-2387793.jpg"
+        src="{% static 'public/images/contact/pexels-adrien-olichon-2387793.jpg' %}"
         alt=""
       />
       <div class="main-about__box">
-        <a class="main-about__box__home" href="./index.html">
+        <a class="main-about__box__home" href="{% url 'home' %}">
           Home | <span>About</span>
         </a>
       </div>
@@ -298,7 +308,7 @@
       <article class="restaurant-about">
         <img
           class="restaurant-about__image"
-          src="./public/images/about/pexels-rachel-claire-6126306.jpg"
+          src="{% static 'public/images/about/pexels-rachel-claire-6126306.jpg' %}"
           alt=""
         />
         <div class="restaurant-about__box">
@@ -313,7 +323,7 @@
             aliquip.
           </p>
           <button class="restaurant-about__box__button">
-            <a href="./rooms-grid.html">Take a Tour</a>
+            <a href="{% url 'home' %}">Take a Tour</a>
           </button>
         </div>
       </article>
@@ -330,7 +340,7 @@
               >01</span
             >
             <img
-              src="./public/icons/home/facilities/icon 1.png"
+              src="{% static 'public/icons/home/facilities/icon 1.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -347,7 +357,7 @@
               >02</span
             >
             <img
-              src="./public/icons/home/facilities/icon 2.png"
+              src="{% static 'public/icons/home/facilities/icon 2.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -364,7 +374,7 @@
               >03</span
             >
             <img
-              src="./public/icons/home/facilities/icon 3.png"
+              src="{% static 'public/icons/home/facilities/icon 3.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -381,7 +391,7 @@
               >04</span
             >
             <img
-              src="./public/icons/home/facilities/icon 4.png"
+              src="{% static 'public/icons/home/facilities/icon 4.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -398,7 +408,7 @@
               >05</span
             >
             <img
-              src="./public/icons/home/facilities/icon 5.png"
+              src="{% static 'public/icons/home/facilities/icon 5.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -415,7 +425,7 @@
               >06</span
             >
             <img
-              src="./public/icons/home/facilities/icon 6.png"
+              src="{% static 'public/icons/home/facilities/icon 6.png' %}"
               alt="icons facilities"
               class="facilities-about__swiper__wrapper__slide__img"
             />
@@ -442,30 +452,42 @@
 
       <div class="counter-about__container">
         <div class="counter-about__container__box">
-          <img src="./public/icons/about/counter/8000.svg" alt="" />
+          <img
+            src="{% static 'public/icons/about/counter/8000.svg' %}"
+            alt=""
+          />
           <div class="counter-about__container__box__text">
             <h2>8000</h2>
             <span>Happy Users</span>
           </div>
-          <img src="./public/icons/about/counter/arrow.svg" alt="" />
+          <img
+            src="{% static 'public/icons/about/counter/arrow.svg' %}"
+            alt=""
+          />
         </div>
 
         <div class="counter-about__container__box">
-          <img src="./public/icons/about/counter/10M.svg" alt="" />
+          <img src="{% static 'public/icons/about/counter/10M.svg' %}" alt="" />
           <div class="counter-about__container__box__text">
             <h2>10M</h2>
             <span>Reviews & Appriciate</span>
           </div>
-          <img src="./public/icons/about/counter/arrow.svg" alt="" />
+          <img
+            src="{% static 'public/icons/about/counter/arrow.svg' %}"
+            alt=""
+          />
         </div>
 
         <div class="counter-about__container__box">
-          <img src="./public/icons/about/counter/10M.svg" alt="" />
+          <img src="{% static 'public/icons/about/counter/10M.svg' %}" alt="" />
           <div class="counter-about__container__box__text">
             <h2>100</h2>
             <span>Country Coverage</span>
           </div>
-          <img src="./public/icons/about/counter/arrow.svg" alt="" />
+          <img
+            src="{% static 'public/icons/about/counter/arrow.svg' %}"
+            alt=""
+          />
         </div>
       </div>
 
@@ -473,13 +495,13 @@
         <div class="swiper-wrapper counter-about__swiper__wrapper">
           <div class="swiper-slide counter-about__swiper__slide">
             <img
-              src="./public/images/about/counter/pexels-aditya-agarwal-1477310.jpg"
+              src="{% static 'public/images/about/counter/pexels-aditya-agarwal-1477310.jpg' %}"
               alt=""
             />
           </div>
           <div class="swiper-slide counter-about__swiper__slide">
             <img
-              src="./public/images/about/counter/pexels-oleksandr-p-2166608.jpg"
+              src="{% static 'public/images/about/counter/pexels-oleksandr-p-2166608.jpg' %}"
               alt=""
             />
           </div>
@@ -503,11 +525,26 @@
             ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
           </p>
           <div class="footer__box__intro-social">
-            <img src="./public/icons/footer/facebook-logo-24.png" alt="" />
-            <img src="./public/icons/footer/twitter-logo-24.png" alt="" />
-            <img src="./public/icons/footer/behance-logo-24.png" alt="" />
-            <img src="./public/icons/footer/linkedin-logo-24.png" alt="" />
-            <img src="./public/icons/footer/youtube-logo-24.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/facebook-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/twitter-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{%static 'public/icons/footer/behance-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/linkedin-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/youtube-logo-24.png' %}"
+              alt=""
+            />
           </div>
         </article>
 
@@ -534,21 +571,30 @@
         <article class="footer__box__contact">
           <h3 class="footer__box__contact__title">Contact Us.</h3>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon tfno.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon tfno.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Phone Number</h6>
               <p>+987 876 765 76 577</p>
             </div>
           </div>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon email.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon email.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Email</h6>
               <p>hotelmiranda@.es</p>
             </div>
           </div>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon location.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon location.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Hotel Address</h6>
               <p>Sayan, Bali 80571</p>
@@ -563,8 +609,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./scripts/navbar.js"></script>
-    <script type="module" src="./scripts/swipers.js"></script>
-    <script type="module" src="./scripts/header.js"></script>
+    <script type="module" src="{% static 'scripts/navbar.js' %}"></script>
+    <script type="module" src="{% static 'scripts/swipers.js' %}"></script>
+    <script type="module" src="{% static 'scripts/header.js' %}"></script>
   </body>
 </html>

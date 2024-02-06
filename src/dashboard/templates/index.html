@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,14 +17,14 @@
     />
     <link
       rel="shortcut icon"
-      href="https://png.pngtree.com/element_our/png_detail/20181207/creative-hotel-icon-background-png_263993.jpg"
+      href="https://png.pngtree.com/element_our/png_detail/20181207/creative-hotel-icon-background-png_263993.jpg' %}"
       type="image/x-icon"
     />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
     <title>Hotel Miranda</title>
   </head>
 
@@ -32,10 +34,18 @@
       <header class="header-box__header">
         <div class="header-box__header__left">
           <button class="header-box__header__left__menu">
-            <img src="./public/icons/navbar/menu.svg" alt="" id="btnMenu" />
-            <img src="./public/icons/navbar/frame.svg" alt="" id="btnFrame" />
+            <img
+              src="{% static 'public/icons/navbar/menu.svg' %}"
+              alt=""
+              id="btnMenu"
+            />
+            <img
+              src="{% static 'public/icons/navbar/frame.svg' %}"
+              alt=""
+              id="btnFrame"
+            />
           </button>
-          <a href="./index.html" class="header-box__header__left__logo">
+          <a href="{% url 'home' %}" class="header-box__header__left__logo">
             <h1 class="header-box__header__left__logo__H">H</h1>
             <h1 class="header-box__header__left__logo__name">
               Hotel <span>Miranda</span>
@@ -44,19 +54,19 @@
         </div>
 
         <nav class="navbar" id="navbar">
-          <a href="./about.html" class="navbar__links">About Us</a>
-          <a href="./rooms-grid.html" class="navbar__links">Rooms</a>
-          <a href="./offers.html" class="navbar__links">Offers</a>
-          <a href="./contact.html" class="navbar__links">Contact</a>
+          <a href="{% url 'about' %}" class="navbar__links">About Us</a>
+          <a href="{% url 'rooms' %}" class="navbar__links">Rooms</a>
+          <a href="{% url 'offers' %}" class="navbar__links">Offers</a>
+          <a href="{% url 'contacts' %}" class="navbar__links">Contact</a>
         </nav>
 
         <div class="header-box__header__icons">
           <img
-            src="./public/icons/header/user.png"
+            src="{% static 'public/icons/header/user.png' %}"
             class="header-box__header__icons__icon"
           />
           <img
-            src="./public/icons/header/search.png"
+            src="{% static 'public/icons/header/search.png' %}"
             class="header-box__header__icons__icon"
           />
         </div>
@@ -68,10 +78,10 @@
       <h1 class="main__title">The Perfect Base For You</h1>
       <div class="main__box">
         <button class="main__box__button__beige">
-          <a href="./rooms-grid.html">TAKE A TOUR</a>
+          <a href="{% url 'rooms' %}">TAKE A TOUR</a>
         </button>
         <button class="main__box__button__black">
-          <a href="./about.html">LEARN MORE</a>
+          <a href="{% url 'about' %}">LEARN MORE</a>
         </button>
       </div>
     </main>
@@ -115,7 +125,7 @@
             aliquip ex ea commodo consequat.
           </p>
           <button class="about__container__text__button">
-            <a href="./offers.html">BOOK NOW</a>
+            <a href="{% url 'offers' %}">BOOK NOW</a>
           </button>
         </div>
       </article>
@@ -123,12 +133,12 @@
       <article class="about__team">
         <img
           class="about__team__image"
-          src="./public/images/home/about/pexels-oleksandr-p-2100804.jpg"
+          src="{% static 'public/images/home/about/pexels-oleksandr-p-2100804.jpg' %}"
           alt="icons facilities"
         />
         <div class="about__team__text">
           <img
-            src="./public/icons/home/about/svg-gobbler.png"
+            src="{% static 'public/icons/home/about/svg-gobbler.png' %}"
             alt="logo team"
           />
           <h4 class="about__team__text__title">Strong Team</h4>
@@ -142,12 +152,12 @@
       <article class="about__luxury">
         <img
           class="about__luxury__image"
-          src="./public/images/home/about/pexels-michael-block-3225531.jpg"
+          src="{% static 'public/images/home/about/pexels-michael-block-3225531.jpg' %}"
           alt="icons facilities"
         />
         <div class="about__luxury__text">
           <img
-            src="./public/icons/home/about/svg-luxury.png"
+            src="{% static 'public/icons/home/about/svg-luxury.png' %}"
             alt="logo luxury"
           />
           <h4 class="about__luxury__text__title">Luxury Room</h4>
@@ -164,37 +174,37 @@
       <h1 class="rooms__title">Hand Picked Rooms</h1>
       <div class="rooms__container">
         <img
-          src="./public/icons/home/rooms/bed.svg"
+          src="{% static 'public/icons/home/rooms/bed.svg' %}"
           alt="icon bed"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/wifi.svg"
+          src="{% static 'public/icons/home/rooms/wifi.svg' %}"
           alt="icon wifi"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/car.svg"
+          src="{% static 'public/icons/home/rooms/car.svg' %}"
           alt="icon parking"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/cold.svg"
+          src="{% static 'public/icons/home/rooms/cold.svg' %}"
           alt="icon cold"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/gym.svg"
+          src="{% static 'public/icons/home/rooms/gym.svg' %}"
           alt="icon gym"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/smoking.svg"
+          src="{% static 'public/icons/home/rooms/smoking.svg' %}"
           alt="icon no smoke"
           class="romms__container__icons"
         />
         <img
-          src="./public/icons/home/rooms/bar.svg"
+          src="{% static 'public/icons/home/rooms/bar.svg' %}"
           alt="icon bar"
           class="romms__container__icons"
         />
@@ -204,43 +214,43 @@
         <div class="swiper-wrapper rooms__swiper__wrapper">
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-7061663.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-7061663.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6186815.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6186815.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6480198.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6480198.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6585619.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6585619.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6587825.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6587825.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6782472.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6782472.jpg' %}"
               alt="image room hotel"
             />
           </div>
           <div class="swiper-slide rooms__swiper__wrapper__slide">
             <img
-              src="./public/images/home/slide/pexels-max-rahubovskiy-6782567.jpg"
+              src="{% static 'public/images/home/slide/pexels-max-rahubovskiy-6782567.jpg' %}"
               alt="image room hotel"
             />
           </div>
@@ -292,7 +302,7 @@
         </div>
         <div class="intro-video__box__button">
           <button class="intro-video__box__button__button">
-            <a href="./offers.html">book now</a>
+            <a href="{% url 'offers' %}">book now</a>
           </button>
         </div>
       </div>
@@ -306,7 +316,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">01</span>
           <img
-            src="./public/icons/home/facilities/icon 1.png"
+            src="{% static 'public/icons/home/facilities/icon 1.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -321,7 +331,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">02</span>
           <img
-            src="./public/icons/home/facilities/icon 2.png"
+            src="{% static 'public/icons/home/facilities/icon 2.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -334,7 +344,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">03</span>
           <img
-            src="./public/icons/home/facilities/icon 3.png"
+            src="{% static 'public/icons/home/facilities/icon 3.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -349,7 +359,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">04</span>
           <img
-            src="./public/icons/home/facilities/icon 4.png"
+            src="{% static 'public/icons/home/facilities/icon 4.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -364,7 +374,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">05</span>
           <img
-            src="./public/icons/home/facilities/icon 5.png"
+            src="{% static 'public/icons/home/facilities/icon 5.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -379,7 +389,7 @@
         <div class="swiper-slide facilities-swiper__wrapper__slide">
           <span class="facilities-swiper__wrapper__slide__number">06</span>
           <img
-            src="./public/icons/home/facilities/icon 6.png"
+            src="{% static 'public/icons/home/facilities/icon 6.png' %}"
             alt="icons facilities"
             class="facilities-swiper__wrapper__slide__img"
           />
@@ -399,7 +409,7 @@
       <div class="menu__container">
         <img
           class="menu__container__icon-certificate"
-          src="./public/icons/home/menu/iconMenu.png"
+          src="{% static 'public/icons/home/menu/iconMenu.png' %}"
           alt="icon garantied"
         />
         <h5 class="menu__container__subtitle">menu</h5>
@@ -409,7 +419,7 @@
           <div class="swiper-wrapper menu__container__swiper__wrapper">
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
               <img
-                src="./public/images/home/menu/eggs&bacon.jpg"
+                src="{% static 'public/images/home/menu/eggs&bacon.jpg' %}"
                 alt="eggs and bacon"
               />
               <div class="menu__container__swiper__wrapper__slide__box">
@@ -424,7 +434,10 @@
             </div>
 
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
-              <img src="./public/images/home/menu/cofee.jpg" alt="coffe" />
+              <img
+                src="{% static 'public/images/home/menu/cofee.jpg' %}"
+                alt="coffe"
+              />
               <div class="menu__container__swiper__wrapper__slide__box">
                 <div class="menu__container__swiper__wrapper__slide__box__text">
                   <h4>Tea or Coffee</h4>
@@ -437,7 +450,10 @@
             </div>
 
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
-              <img src="./public/images/home/menu/chia.jpg" alt="plate chia" />
+              <img
+                src="{% static 'public/images/home/menu/chia.jpg' %}"
+                alt="plate chia"
+              />
               <div class="menu__container__swiper__wrapper__slide__box">
                 <div class="menu__container__swiper__wrapper__slide__box__text">
                   <h4>Chia Oatmeal</h4>
@@ -451,7 +467,7 @@
 
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
               <img
-                src="./public/images/home/menu/fruit.jpg"
+                src="{% static 'public/images/home/menu/fruit.jpg' %}"
                 alt="fruit Parfait"
               />
               <div class="menu__container__swiper__wrapper__slide__box">
@@ -467,7 +483,7 @@
 
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
               <img
-                src="./public/images/home/menu/mermelade.jpg"
+                src="{% static 'public/images/home/menu/mermelade.jpg' %}"
                 alt="Marmalade selection"
               />
               <div class="menu__container__swiper__wrapper__slide__box">
@@ -483,7 +499,7 @@
 
             <div class="swiper-slide menu__container__swiper__wrapper__slide">
               <img
-                src="./public/images/home/menu/cheese.jpg"
+                src="{% static 'public/images/home/menu/cheese.jpg' %}"
                 alt="cheese plate"
               />
               <div class="menu__container__swiper__wrapper__slide__box">
@@ -513,19 +529,19 @@
         <div class="swiper-wrapper menu__photos__wrapper">
           <div class="swiper-slide menu__photos__slide">
             <img
-              src="./public/images/home/menu/pexels-iina-luoto-1211887.jpg"
+              src="{% static 'public/images/home/menu/pexels-iina-luoto-1211887.jpg' %}"
               alt=""
             />
           </div>
           <div class="swiper-slide menu__photos__slide">
             <img
-              src="./public/images/home/menu/pexels-julie-aagaard-2097090 (1).jpg"
+              src="{% static 'public/images/home/menu/pexels-julie-aagaard-2097090 (1).jpg' %}"
               alt=""
             />
           </div>
           <div class="swiper-slide menu__photos__slide">
             <img
-              src="./public/images/home/menu/pexels-王文栋-18954037.jpg"
+              src="{% static 'public/images/home/menu/pexels-王文栋-18954037.jpg' %}"
               alt=""
             />
           </div>
@@ -539,7 +555,7 @@
         <div class="info__box">
           <img
             class="info__box__icon"
-            src="./public/icons/home/info/icon 5.png"
+            src="{% static 'public/icons/home/info/icon 5.png' %}"
             alt="icon"
           />
           <h1 class="info__box__title">84k<span>+</span></h1>
@@ -548,7 +564,7 @@
         <div class="info__box">
           <img
             class="info__box__icon"
-            src="./public/icons/home/info/icon 6.png"
+            src="{% static 'public/icons/home/info/icon 6.png' %}"
             alt="icon"
           />
           <h1 class="info__box__title">10M<span>+</span></h1>
@@ -557,7 +573,7 @@
         <div class="info__box">
           <img
             class="info__box__icon"
-            src="./public/icons/home/info/icon 7.png"
+            src="{% static 'public/icons/home/info/icon 7.png' %}"
             alt="icon"
           />
           <h1 class="info__box__title">02k<span>+</span></h1>
@@ -566,7 +582,7 @@
         <div class="info__box">
           <img
             class="info__box__icon"
-            src="./public/icons/home/info/icon 8.png"
+            src="{% static 'public/icons/home/info/icon 8.png' %}"
             alt="icon"
           />
           <h1 class="info__box__title">100M<span>+</span></h1>
@@ -590,11 +606,26 @@
             ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
           </p>
           <div class="footer__box__intro-social">
-            <img src="./public/icons/footer/facebook-logo-24.png" alt="" />
-            <img src="./public/icons/footer/twitter-logo-24.png" alt="" />
-            <img src="./public/icons/footer/behance-logo-24.png" alt="" />
-            <img src="./public/icons/footer/linkedin-logo-24.png" alt="" />
-            <img src="./public/icons/footer/youtube-logo-24.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/facebook-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/twitter-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/behance-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/linkedin-logo-24.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'public/icons/footer/youtube-logo-24.png' %}"
+              alt=""
+            />
           </div>
         </article>
 
@@ -621,21 +652,30 @@
         <article class="footer__box__contact">
           <h3 class="footer__box__contact__title">Contact Us.</h3>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon tfno.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon tfno.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Phone Number</h6>
               <p>+987 876 765 76 577</p>
             </div>
           </div>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon email.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon email.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Email</h6>
               <p>hotelmiranda@.es</p>
             </div>
           </div>
           <div class="footer__box__contact__box">
-            <img src="./public/icons/footer/contact/icon location.png" alt="" />
+            <img
+              src="{% static 'public/icons/footer/contact/icon location.png' %}"
+              alt=""
+            />
             <div class="footer__box__contact__box__info">
               <h6>Hotel Address</h6>
               <p>Sayan, Bali 80571</p>
@@ -650,8 +690,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./scripts/navbar.js"></script>
-    <script type="module" src="./scripts/swipers.js"></script>
-    <script type="module" src="./scripts/header.js"></script>
+    <script type="module" src="{% static 'scripts/navbar.js' %}"></script>
+    <script type="module" src="{% static 'scripts/swipers.js' %}"></script>
+    <script type="module" src="{% static 'scripts/header.js' %}"></script>
   </body>
 </html>
