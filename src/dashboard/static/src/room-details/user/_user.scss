@@ -1,0 +1,110 @@
+.user {
+  width: 100%;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 23em;
+
+    &__image {
+      width: 150px;
+      height: 150px;
+      background: url("./public/images/room-details/user/pexels-heber-vazquez-16153366.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      display: flex;
+      justify-content: end;
+
+      &__icon {
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        border: 5px solid white;
+        background-color: #bdac8d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__check {
+          width: 1em;
+          height: auto;
+        }
+      }
+    }
+    &__text {
+      margin-top: 2.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__name {
+        color: #222;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+      }
+      &__name::before {
+        content: "Rosalina D. William";
+      }
+      &__position {
+        margin-top: 0.7em;
+        color: #bdac8d;
+        font-family: $secondary-font;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+      }
+      &__position::before {
+        content: "Founder, Qux Co.";
+      }
+      &__description {
+        max-width: 90%;
+        margin-top: 1.3em;
+        color: #777;
+        text-align: center;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .user {
+    margin-left: 15%;
+    max-width: 100%;
+    display: flex;
+
+    &__box {
+      padding: 1.2em;
+      box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.27);
+
+      &__image {
+        background: url("./public/images/room-details/user/pexels-emmanuel-jason-eliphalet-19048883.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__text {
+        &__name::before {
+          content: "Donald H. Hilixer";
+        }
+        &__position::before {
+          content: "FOUNDER, HILIX";
+        }
+      }
+    }
+  }
+}

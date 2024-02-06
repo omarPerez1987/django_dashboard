@@ -1,0 +1,8 @@
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+@import "./main-offers/main-offers";
+@import "./card-offers/card-offers";
+@import "./popular-rooms/popular-rooms";

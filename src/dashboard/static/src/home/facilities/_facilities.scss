@@ -1,0 +1,93 @@
+.facilities-swiper {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-bottom: 2.6em;
+
+  &__subtitle {
+    margin-top: 3.2em;
+    color: #777;
+    font-family: $secondary-font;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+  }
+  &__title {
+    margin: 0.5em 0em;
+    color: #222;
+    font-family: $primary-font;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+  }
+
+  &__wrapper__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__number {
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      color: rgba(34, 34, 34, 0.04);
+      font-family: $secondary-font;
+      font-size: 7.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130px;
+      margin-left: 2.4em;
+    }
+
+    &__img {
+      margin-left: 2.4em;
+      margin-top: 5em;
+      width: 4.3em;
+      height: 4.3em;
+      flex-shrink: 0;
+    }
+
+    &__title {
+      margin: 1.5em 0px 1.5em 1.2em;
+      color: #222;
+      font-family: $primary-font;
+      font-size: 1.9rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: -0.9px;
+    }
+
+    &__text {
+      margin-left: 2.5em;
+      padding-bottom: 2em;
+      width: 250px;
+      text-align: start;
+      color: #777;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  .facilities-swiper__pagination {
+    --swiper-pagination-color: #bead8e;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .facilities-swiper {
+    max-width: 1188px;
+
+    &__wrapper__slide:hover {
+      box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.36);
+    }
+  }
+}

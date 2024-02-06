@@ -1,0 +1,240 @@
+.about {
+  max-width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__container {
+    margin-top: 3.75em;
+    background: url("../../../public/images/about/pexels-mikhail-nilov-6707630.jpg")
+      no-repeat center center/cover;
+    width: 100%;
+    height: 38.1em;
+    padding-top: 2.37em;
+    box-shadow: inset 0px 350px 100px -10px #fff;
+    &__subtitle {
+      width: 90%;
+      color: #777;
+      font-family: $secondary-font;
+      font-size: 0.81rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      margin-left: 20px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      width: 89%;
+      margin-left: 20px;
+
+      &__title {
+        color: #111;
+        font-family: $primary-font;
+        font-size: 3.3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+      }
+
+      &__paragraph {
+        color: #777;
+        font-family: $secondary-font;
+        font-size: 0.87rem;
+        font-style: normal;
+        font-weight: 400;
+        max-width: 28em;
+      }
+
+      &__button {
+        width: 13.5em;
+        height: 3.75em;
+        background: #bdac8d;
+        border: none;
+        color: #fff;
+        font-family: $secondary-font;
+        font-size: 0.87rem;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__team {
+    margin-top: -9.37em;
+    text-align: center;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 100%;
+      max-width: 16.8em;
+      height: 18.7em;
+    }
+
+    &__text {
+      margin-top: -0.2em;
+      max-width: 16.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.8em;
+      padding-top: 3.37em;
+
+      &__title {
+        color: #111;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+      }
+
+      &__paragraph {
+        width: 14em;
+        color: #111;
+        text-align: center;
+        font-family: $third-font;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__luxury {
+    margin-top: 2.8em;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 100%;
+      max-width: 16.8em;
+      height: 18.7em;
+    }
+
+    &__text {
+      margin-top: -0.2em;
+      width: 100%;
+      max-width: 16.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.8em;
+      padding-top: 3.37em;
+      background: #222;
+
+      &__title {
+        color: #fff;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+      }
+
+      &__paragraph {
+        width: 14em;
+        color: #fff;
+        text-align: center;
+        font-family: $third-font;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        padding-bottom: 2.5em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .about {
+    margin: 7em 0em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .about__container {
+    width: 55%;
+    background: #f9f9f9;
+    order: 3;
+    z-index: 0;
+    margin-top: 10em;
+    &__subtitle {
+      width: auto;
+      margin-top: -4em;
+      margin-left: 15%;
+    }
+    &__text {
+      margin-left: 15%;
+      width: auto;
+      
+      &__title {
+        color: #111;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 90px;
+        letter-spacing: -2.4px;
+        width: auto;
+      }
+      &__paragraph {
+        width: auto;
+      }
+    }
+  }
+  
+  .about__team {
+    order: 1;
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -7em;
+
+    &__text {
+      background: #FFF;
+      padding: 0;
+      padding: 3em 0em;
+      width: 16.8em;
+      margin-bottom: 1em;
+      box-shadow: 0px 8px 16px 0px rgba(34, 34, 34, 0.02);
+    }
+  }
+  
+  .about__luxury {
+    z-index: 1;
+    order: 2;
+    width: auto;
+    margin-top: -2em;
+    margin-right: -5%;
+    margin-left: 2em;
+    &__text {
+      padding: 0;
+      padding: 2em 0em;
+      width: 16.8em;
+      margin-top: 1em;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) { 
+  .about__container__text__title {
+    font-size: 5.5rem;
+  }
+}

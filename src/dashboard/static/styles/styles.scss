@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+// body {
+//   background-color: aqua;
+// }
+
+// ---------------------------------------------------------------------------------
+
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+@import "../src/header/header";
+@import "../src/home/home.scss";
+@import "../src/about/about.scss";
+@import "../src/rooms/rooms.scss";
+@import "../src/room-details/room-details.scss";
+@import "../src/offers/offers.scss";
+@import "../src/contact/contact.scss";
+@import "../src/footer/footer";
+
+// COMPONENTS *******************************************
+
+@import "../src/components/swipperMinimal/swiperMinimal";

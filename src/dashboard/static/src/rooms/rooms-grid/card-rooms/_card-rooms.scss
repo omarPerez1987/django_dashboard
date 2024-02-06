@@ -1,0 +1,226 @@
+.rooms-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__box {
+    width: 90%;
+    margin-top: 3em;
+    text-align: center;
+
+    &__image {
+      width: 100%;
+      height: auto;
+      max-width: 470px;
+      z-index: 0;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__icons {
+        margin-top: -1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+        width: 16em;
+        height: 2.5em;
+        z-index: 1;
+      }
+      &__title {
+        margin-top: 1.6em;
+        color: #222;
+        text-align: right;
+        font-family: $primary-font;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.72px;
+      }
+      &__paragraph {
+        margin-top: 1em;
+        width: 90%;
+        color: #777;
+        text-align: center;
+        font-family: $third-font;
+
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+    &__box-price {
+      margin-top: 0.5em;
+      display: flex;
+      justify-content: center;
+      gap: 1.2em;
+
+      &__price {
+        color: #bead8e;
+        text-align: right;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      &__button {
+        color: #bdbdbd;
+        text-align: right;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      &__button::before {
+        content: "Booking Now";
+      }
+      &__button:hover::before {
+        content: "Book Now";
+        color: green;
+      }
+    }
+  }
+  &__box:hover {
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.178);
+    transition-duration: 0.8s;
+    transform: scale(1.1);
+  }
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__rooms {
+    margin-top: 2.5em;
+    width: 100%;
+    max-width: 25em;
+    display: flex;
+    justify-content: space-evenly;
+
+    &__move {
+      padding: 0.5em 0.8em;
+      border: none;
+      fill: white;
+      background: none;
+      cursor: pointer;
+    }
+    &__page {
+      padding: 0.5em 0.8em;
+      border: none;
+      color: black;
+      background: none;
+    }
+  }
+}
+.active-page {
+  background-color: #bead8e;
+  color: #fff;
+}
+
+@media screen and (min-width: 765px) {
+  .rooms-grid__box {
+    display: flex;
+    flex-direction: row;
+    &__image {
+      width: 40%;
+    }
+    &__text {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 40%;
+      padding-left: 1em;
+      &__icons {
+        width: 80%;
+      }
+
+      &__title {
+        text-align: start;
+        width: auto;
+      }
+      &__paragraph {
+        width: 13.5em;
+        text-align: start;
+      }
+    }
+    &__box-price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__price {
+        text-align: start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .rooms-grid {
+    margin: 0 auto;
+    padding-top: 7em;
+    max-width: 1170px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.7em;
+
+    &__box {
+      padding-bottom: 1.7em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 370px;
+      text-align: center;
+      box-shadow: 0px 8px 16px 0px rgba(73, 73, 73, 0.05);
+
+      &__image {
+        width: 23em;
+        height: auto;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0px;
+
+        &__icons {
+          margin-top: -2.5em;
+        }
+
+        &__paragraph {
+          text-align: center;
+          width: 90%;
+        }
+      }
+      &__box-price {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

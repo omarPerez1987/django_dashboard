@@ -17,12 +17,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from dashboard.views.Bookings import create_booking
-from dashboard.views.Contacts import view_contacts
-from dashboard.views.Rooms import view_rooms
+from dashboard.views.Contacts import *
+from dashboard.views.Rooms import *
+from dashboard.views.render_html import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('rooms/', rooms_list, name='index.html'),
+    path('rooms/<int:id>', room_view, name='room_view'),
     path('bookings/', create_booking, name='bookings'),
-    path('contacts/', view_contacts, name='contacts'),
-    path('rooms/', view_rooms, name='rooms'),
+    # path('contacts/', contact_view, name='contact.html'),
+    # path('contacts/<int:id>', contact_create, name='contacts'),
+
+    # path('home/', render_html, name='index.html'),
+    # path('about/', render_html, name='about.html'),
+    # path('rooms/', render_html, name='rooms-grid.html'),
+    # path('rooms/<int:id>', room_view, name='rooms-details.html'),
+    # path('offers/', render_html, name='offers.html'),
+    path('contacts/', render_html, name='contacts.html'),
+
+
 ]

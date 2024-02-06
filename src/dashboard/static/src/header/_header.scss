@@ -1,0 +1,140 @@
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+.header-box {
+  &__mini-title {
+    display: none;
+  }
+  &__header {
+    z-index: 99;
+    position: fixed;
+    background: #fff;
+    font-family: $secondary-font;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5em;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.438);
+
+    &__left {
+      margin-left: 1.25em;
+      display: flex;
+      gap: 2em;
+      align-items: center;
+
+      &__logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        height: 2.25em;
+        width: 6.57em;
+      }
+      &__logo__H {
+        padding: 0.3em 0.5em;
+        color: #111;
+        font-size: 1.2em;
+        font-style: normal;
+        font-weight: 700;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.25);
+      }
+
+      &__logo__name {
+        color: #111;
+        font-size: 0.5em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+      }
+
+      &__menu {
+        width: 3em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+      }
+    }
+
+    &__icons {
+      margin-right: 1.25em;
+      display: flex;
+      gap: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header-box {
+    max-height: 100px;
+    padding-top: 1.5em;
+    width: 100%;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__mini-title {
+      width: 85%;
+      text-align: start;
+      display: block;
+      color: #fff;
+      font-family: Roboto;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &__header {
+      position: static;
+      height: auto;
+      margin-top: 0.5em;
+      width: 85%;
+      margin-bottom: -3em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      transform: translateY(0);
+      transition: transform 0.5s ease;
+
+      &__left {
+        &__logo__H {
+          padding: 0.3em 0.5em;
+          font-size: 2.5rem;
+        }
+
+        &__logo__name {
+          margin-left: 1em;
+          font-size: 1.6rem;
+          & span {
+            font-weight: 400;
+          }
+        }
+
+        &__menu {
+          display: none;
+        }
+      }
+
+      &__icons {
+        padding: 1em 2em;
+        margin-right: 0em;
+        display: flex;
+        justify-content: center;
+      }
+
+      &__icons img {
+        width: 1.5em;
+        padding: 1em;
+        border: 2px solid rgba(133, 133, 133, 0.3);
+      }
+    }
+  }
+}

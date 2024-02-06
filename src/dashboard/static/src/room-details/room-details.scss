@@ -1,0 +1,11 @@
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+@import "./main-details/main-details";
+@import "./info-check/info-check";
+@import "./amenities/amenities";
+@import "./user/user";
+@import "./cancellation/cancellation";
+@import "./related-rooms/related-rooms";

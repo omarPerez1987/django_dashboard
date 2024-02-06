@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Old+Standard+TT:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://png.pngtree.com/element_our/png_detail/20181207/creative-hotel-icon-background-png_263993.jpg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Hotel Miranda</title>
+  </head>
+  <body>
+    <section class="header-box">
+      <h6 class="header-box__mini-title">We Make Your Feel Comfortable</h6>
+      <header class="header-box__header">
+        <div class="header-box__header__left">
+          <button class="header-box__header__left__menu">
+            <img src="./public/icons/navbar/menu.svg" alt="" id="btnMenu" />
+            <img src="./public/icons/navbar/frame.svg" alt="" id="btnFrame" />
+          </button>
+          <a href="./index.html" class="header-box__header__left__logo">
+            <h1 class="header-box__header__left__logo__H">H</h1>
+            <h1 class="header-box__header__left__logo__name">
+              Hotel <span>Miranda</span>
+            </h1>
+          </a>
+        </div>
+
+        <nav class="navbar" id="navbar">
+          <a href="./about.html" class="navbar__links">About Us</a>
+          <a href="./rooms-grid.html" class="navbar__links">Rooms</a>
+          <a href="./offers.html" class="navbar__links">Offers</a>
+          <a href="./contact.html" class="navbar__links">Contact</a>
+        </nav>
+
+        <div class="header-box__header__icons">
+          <img
+            src="./public/icons/header/user.png"
+            class="header-box__header__icons__icon"
+          />
+          <img
+            src="./public/icons/header/search.png"
+            class="header-box__header__icons__icon"
+          />
+        </div>
+      </header>
+    </section>
+
+    <section class="main-about">
+      <h3 class="main-about__subtitle">THE ULTIMATE LUXURY</h3>
+      <h1 class="main-about__title">Ultimate Room</h1>
+      <img
+        class="main-about__img"
+        src="./public/images/contact/pexels-adrien-olichon-2387793.jpg"
+        alt=""
+      />
+      <div class="main-about__box">
+        <a class="main-about__box__home" href="./index.html">
+          Home | <span>Rooms</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="rooms-grid" id="cardRoomsSection">
+      <a
+        href="./rooms-details.html"
+        class="rooms-grid__box"
+        id="cardRoomsSectionBox"
+      >
+        <img
+          class="rooms-grid__box__image"
+          src="./public/images/rooms/pexels-max-rahubovskiy-6480198.jpg"
+          alt=""
+        />
+        <div class="rooms-grid__box__text">
+          <div class="rooms-grid__box__text__icons">
+            <img
+              src="./public/icons/home/rooms/bed.svg"
+              alt="icon bed"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/wifi.svg"
+              alt="icon wifi"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/car.svg"
+              alt="icon parking"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/cold.svg"
+              alt="icon cold"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/gym.svg"
+              alt="icon gym"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/smoking.svg"
+              alt="icon no smoke"
+              class="rooms-grid__box__text__icons__image"
+            />
+            <img
+              src="./public/icons/home/rooms/bar.svg"
+              alt="icon bar"
+              class="rooms-grid__box__text__icons__image"
+            />
+          </div>
+          <h2 class="rooms-grid__box__text__title">Minimal Duplex Room</h2>
+          <p class="rooms-grid__box__text__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do
+            eiusmod tempor.
+          </p>
+        </div>
+        <div class="rooms-grid__box__box-price">
+          <p class="rooms-grid__box__box-price__price">
+            $345 <span>/Night</span>
+          </p>
+          <button class="rooms-grid__box__box-price__button"></button>
+        </div>
+      </a>
+    </section>
+
+    <section class="pagination">
+      <div class="pagination__rooms">
+        <button class="pagination__rooms__move" id="previous">
+          <img src="./public/icons/rooms/arrow-prev.svg" alt="" />
+        </button>
+        <button class="pagination__rooms__page" id="page1">1</button>
+        <button class="pagination__rooms__page" id="page2">2</button>
+        <button class="pagination__rooms__page" id="page3">3</button>
+        <button class="pagination__rooms__page" id="page4">...</button>
+        <button class="pagination__rooms__move" id="next">
+          <img src="./public/icons/rooms/arrow-next.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__box">
+        <article class="footer__box__intro">
+          <div class="footer__box__intro__text">
+            <h1 class="footer__box__intro__text__letter">H</h1>
+            <h2 class="footer__box__intro__text__title">
+              Hotel <span>Miranda</span>
+            </h2>
+          </div>
+          <p class="footer__box__intro__text__paragraph">
+            Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
+            eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+          </p>
+          <div class="footer__box__intro-social">
+            <img src="./public/icons/footer/facebook-logo-24.png" alt="" />
+            <img src="./public/icons/footer/twitter-logo-24.png" alt="" />
+            <img src="./public/icons/footer/behance-logo-24.png" alt="" />
+            <img src="./public/icons/footer/linkedin-logo-24.png" alt="" />
+            <img src="./public/icons/footer/youtube-logo-24.png" alt="" />
+          </div>
+        </article>
+
+        <article class="footer__box__services">
+          <h3 class="footer__box__services__title">Services.</h3>
+          <div class="footer__box__services__container">
+            <ul class="footer__box__services__container__list">
+              <li>+ Restaurant & Bar</li>
+              <li>+ Swimming Pool</li>
+              <li>+ Wellness & Spa</li>
+              <li>+ Restaurant</li>
+              <li>+ Conference Room</li>
+              <li>+ Coctail Party House</li>
+            </ul>
+            <ul class="footer__box__services__container__list">
+              <li>+ Gaming Zone</li>
+              <li>+ Marrige Party</li>
+              <li>+ Party Planning</li>
+              <li>+ Tour Consultancy</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="footer__box__contact">
+          <h3 class="footer__box__contact__title">Contact Us.</h3>
+          <div class="footer__box__contact__box">
+            <img src="./public/icons/footer/contact/icon tfno.png" alt="" />
+            <div class="footer__box__contact__box__info">
+              <h6>Phone Number</h6>
+              <p>+987 876 765 76 577</p>
+            </div>
+          </div>
+          <div class="footer__box__contact__box">
+            <img src="./public/icons/footer/contact/icon email.png" alt="" />
+            <div class="footer__box__contact__box__info">
+              <h6>Email</h6>
+              <p>hotelmiranda@.es</p>
+            </div>
+          </div>
+          <div class="footer__box__contact__box">
+            <img src="./public/icons/footer/contact/icon location.png" alt="" />
+            <div class="footer__box__contact__box__info">
+              <h6>Hotel Address</h6>
+              <p>Sayan, Bali 80571</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="footer__copyright">
+        <p>Copyright By@Example - 2020</p>
+        <p>Terms of use | Privacy Environmental Policy</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./scripts/navbar.js"></script>
+    <script type="module" src="./scripts/swipers.js"></script>
+    <script type="module" src="./scripts/pagination.js"></script>
+    <script type="module" src="./scripts/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+.restaurant-about {
+  margin-top: 3.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background: #fff;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+  
+  &__image {
+    width: 18.4em;
+    height: 14.5em;
+  }
+  
+  &__box {
+    margin-top: 2em;
+    margin-left: 1.1em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+    &__subtitle {
+      margin-bottom: 1.5em;
+      color: #777;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+    
+    &__title {
+      margin-bottom: 0.5em;
+      color: #222;
+      font-family: $primary-font;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -1.05px;
+    }
+    
+    &__text {
+      margin-bottom: 1em;
+      color: #777;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    &__button {
+      margin-bottom: 1.2em;
+      width: 13.5em;
+      height: 3.7em;
+      background: #bead8e;
+      box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.36);
+      color: #fff;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+    }
+    
+  }
+}
+
+
+@media screen and (min-width: 1000px) { 
+  .restaurant-about {
+    flex-direction: row;
+    width: 100%;
+
+    &__image {
+      width: 60%;
+      height: auto;
+    }
+    &__box {
+      margin-left: 2em;
+    }
+  }
+}

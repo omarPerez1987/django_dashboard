@@ -1,0 +1,502 @@
+.main-details-w {
+  width: 12em;
+}
+
+.info-check {
+  width: 100%;
+  padding: 3em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-check__container {
+  width: 90%;
+}
+.info-check__container__text-and-img__text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5em;
+}
+.info-check__container__text-and-img__text__subtitle {
+  color: #777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.info-check__container__text-and-img__text__title {
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -1.44px;
+}
+.info-check__container__text-and-img__text__price {
+  color: #bead8e;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.info-check__container__text-and-img__text__price span {
+  color: #bead8e;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+}
+.info-check__container__text-and-img__image {
+  width: 100%;
+  max-width: 48em;
+}
+.info-check__container__text-and-img__image img {
+  width: 100%;
+}
+.info-check__container__check {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-check__container__check__title {
+  color: #222;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.info-check__container__check__form {
+  width: 70%;
+  max-width: 23.4em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.info-check__container__check__form__label {
+  margin-top: 1em;
+  width: 80%;
+  color: #222;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: start;
+}
+.info-check__container__check__form__input {
+  width: 80%;
+  margin-top: 0.5em;
+  padding: 0em 1.8em;
+  height: 3.7em;
+  background: #f8f8f8;
+  border: none;
+}
+.info-check__container__check__form__button {
+  margin-top: 1.2em;
+  width: 100%;
+  max-width: 24.2em;
+  height: 3.7em;
+  background: #bead8e;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.info-check__container__paragraph {
+  margin-top: 1.5em;
+  max-width: 43.2em;
+}
+
+@media screen and (min-width: 1300px) {
+  .info-check {
+    width: 100%;
+    max-width: 1170px;
+    align-items: start;
+  }
+  .info-check__container {
+    margin-top: 5em;
+    position: relative;
+  }
+  .info-check__container__text-and-img {
+    padding-left: 0;
+  }
+  .info-check__container__text-and-img__text {
+    height: 9em;
+    position: relative;
+    background: #fff;
+    padding: 1em;
+    margin-bottom: -5.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+  }
+  .info-check__container__text-and-img__img {
+    margin-top: -3em;
+  }
+  .info-check__container__check {
+    padding: 0;
+    margin: 0;
+    margin-top: 3em;
+    width: 23.1em;
+    position: absolute;
+    top: -3em;
+    right: -5.5em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .info-check {
+    margin-left: 15%;
+    max-width: 1170px;
+  }
+}
+.amenities {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+.amenities__title {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.amenities__list {
+  margin-top: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.amenities__list__items {
+  display: flex;
+  gap: 0.5em;
+  width: 47%;
+}
+.amenities__list__items__text {
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (min-width: 1400px) {
+  .amenities {
+    margin-left: 15%;
+    max-width: 1170px;
+  }
+}
+.user {
+  width: 100%;
+}
+.user__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 23em;
+}
+.user__box__image {
+  width: 150px;
+  height: 150px;
+  background: url("./public/images/room-details/user/pexels-heber-vazquez-16153366.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: end;
+}
+.user__box__image__icon {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  border: 5px solid white;
+  background-color: #bdac8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user__box__image__icon__check {
+  width: 1em;
+  height: auto;
+}
+.user__box__text {
+  margin-top: 2.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user__box__text__name {
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.9px;
+}
+.user__box__text__name::before {
+  content: "Rosalina D. William";
+}
+.user__box__text__position {
+  margin-top: 0.7em;
+  color: #bdac8d;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.user__box__text__position::before {
+  content: "Founder, Qux Co.";
+}
+.user__box__text__description {
+  max-width: 90%;
+  margin-top: 1.3em;
+  color: #777;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1000px) {
+  .user {
+    margin-left: 15%;
+    max-width: 100%;
+    display: flex;
+  }
+  .user__box {
+    padding: 1.2em;
+    box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.27);
+  }
+  .user__box__image {
+    background: url("./public/images/room-details/user/pexels-emmanuel-jason-eliphalet-19048883.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .user__box__text__name::before {
+    content: "Donald H. Hilixer";
+  }
+  .user__box__text__position::before {
+    content: "FOUNDER, HILIX";
+  }
+}
+.cancelation {
+  margin-top: 6.5em;
+  max-width: 48em;
+}
+.cancelation__title {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
+  width: 90%;
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.cancelation__text {
+  margin-top: 2em;
+  width: 86%;
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1400px) {
+  .cancelation {
+    margin-left: 15%;
+    max-width: 1170px;
+  }
+  .cancelation__title {
+    margin-left: 1.8em;
+  }
+  .cancelation__text {
+    margin-left: 3em;
+    width: 40em;
+  }
+}
+.related-rooms {
+  margin-bottom: 5em;
+  margin-top: 3.75em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.related-rooms__title {
+  width: 100%;
+  text-align: start;
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.related-rooms {
+  padding-bottom: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.related-rooms__box {
+  width: 90%;
+  margin-top: 3em;
+  text-align: center;
+}
+.related-rooms__box__image {
+  width: 100%;
+  height: auto;
+  max-width: 470px;
+  z-index: 0;
+}
+.related-rooms__box__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.related-rooms__box__text__icons {
+  margin-top: -1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+  width: 16em;
+  height: 2.5em;
+  z-index: 1;
+}
+.related-rooms__box__text__title {
+  margin-top: 1.6em;
+  color: #222;
+  text-align: right;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.72px;
+}
+.related-rooms__box__text__paragraph {
+  margin-top: 1em;
+  width: 90%;
+  color: #777;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.related-rooms__box__box-price {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+.related-rooms__box__box-price__price {
+  color: #bead8e;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.related-rooms__box__box-price__button {
+  color: #bdbdbd;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.related-rooms__box__box-price__button::before {
+  content: "Booking Now";
+}
+.related-rooms__box__box-price__button:hover::before {
+  content: "Book Now";
+  color: green;
+}
+.related-rooms__scroll__button-prev {
+  margin-top: -7em;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+.related-rooms__scroll__button-prev::after {
+  font-size: 9.6px;
+  flex-shrink: 0;
+  color: #111111;
+}
+.related-rooms__scroll__button-next {
+  margin-top: -7em;
+  width: 32px;
+  height: 32px;
+  background: #bdac8d;
+  border: none;
+  cursor: pointer;
+}
+.related-rooms__scroll__button-next::after {
+  font-size: 9.6px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1400px) {
+  .related-rooms {
+    justify-content: start;
+    align-items: start;
+    margin-left: 15%;
+    max-width: 1170px;
+  }
+}/*# sourceMappingURL=room-details.css.map */

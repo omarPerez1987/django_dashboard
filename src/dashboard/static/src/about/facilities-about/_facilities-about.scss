@@ -1,0 +1,102 @@
+.facilities-about {
+  &__swiper {
+    margin-top: 1.87em;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding-bottom: 2em;
+    background: #222;
+
+    &__subtitle {
+      margin-top: 3.2em;
+      color: #fff;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+    &__title {
+      margin: 0.5em 0em;
+      color: #fff;
+      font-family: $primary-font;
+      font-size: 3.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: -1.2px;
+    }
+
+    &__wrapper__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding-bottom: 2.75em;
+      background: #292929;
+      margin-bottom: 3em;
+
+      &__number {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        color: rgba(34, 34, 34, 0.04);
+        font-family: $secondary-font;
+        font-size: 7.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130px;
+        margin-left: 2.4em;
+        color: #222;
+      }
+
+      &__img {
+        margin-left: 2.4em;
+        margin-top: 5em;
+        width: 4.3em;
+        height: 4.3em;
+        flex-shrink: 0;
+      }
+
+      &__title {
+        margin: 1.5em 0px 1em 1.2em;
+        color: #222;
+        font-family: $primary-font;
+        font-size: 1.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+        color: #fff;
+      }
+
+      &__text {
+        margin-left: 2.5em;
+        width: 270px;
+        text-align: start;
+        color: #fff;
+        font-family: $secondary-font;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 3.18em;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      --swiper-pagination-color: #bead8e;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .facilities-about {
+    background: #222;
+    width: 100%;
+    &__swiper {
+      width: 70%;
+    }
+  }
+}

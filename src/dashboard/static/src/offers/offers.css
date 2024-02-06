@@ -1,0 +1,413 @@
+.main-offers {
+  width: 100%;
+  height: auto;
+}
+.main-offers__img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 16.5em;
+  display: flex;
+  flex-direction: column;
+  filter: brightness(70%);
+}
+.main-offers__subtitle {
+  position: absolute;
+  z-index: 1;
+  margin-top: 5.7em;
+  margin-left: 1.2em;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2.8px;
+}
+.main-offers__title {
+  position: absolute;
+  top: 3em;
+  z-index: 1;
+  margin-top: 0.1em;
+  margin-left: 0.2em;
+  width: 80%;
+  color: #fff;
+  font-family: "Old Standard TT", serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+}
+.main-offers__box {
+  margin-top: -3em;
+  margin-right: 4%;
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  width: auto;
+  height: 3em;
+  flex-shrink: 0;
+  background: #fff;
+  text-align: center;
+}
+.main-offers__box__home {
+  padding: 0em 1em;
+  margin-top: 1em;
+  color: #222;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.48px;
+}
+.main-offers__box__home span {
+  color: #bead8e;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.48px;
+}
+
+.card-offers {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 3em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+}
+.card-offers__box-image {
+  width: 100%;
+  margin: 0 auto;
+}
+.card-offers__box-image__image {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 162px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-offers__container {
+  margin-top: 1em;
+  width: 90%;
+  padding-left: 1.2em;
+}
+.card-offers__container__header-card__box-title__subtitle {
+  color: #777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.card-offers__container__header-card__box-title__title {
+  width: 80%;
+  margin-top: 0.3em;
+  color: #222;
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -1.44px;
+}
+.card-offers__container__header-card__box-price {
+  position: relative;
+  z-index: 1;
+  top: -210px;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.card-offers__container__header-card__box-price__strikethrough {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+}
+.card-offers__container__header-card__box-price__strikethrough h5 {
+  color: #bead8e;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: line-through;
+}
+.card-offers__container__header-card__box-price__strikethrough span {
+  color: #bead8e;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: line-through;
+}
+.card-offers__container__header-card__box-price__offer {
+  color: #de5777;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card-offers__container__header-card__box-price__offer span {
+  color: #de5777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card-offers__container__flex__description {
+  margin-top: -2.5em;
+}
+.card-offers__container__flex__description__paragraph {
+  width: 90%;
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.card-offers__container__flex__box-list {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.card-offers__container__flex__box-list__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.card-offers__container__flex__box-list__list__items {
+  display: flex;
+  gap: 0.5em;
+}
+.card-offers__container__flex__box-list__list__items__icons {
+  width: 1rem;
+  height: 1rem;
+}
+.card-offers__container__flex__box-list__list__items__text {
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.card-offers__container__box-button {
+  margin-top: 1.5em;
+}
+.card-offers__container__box-button__button {
+  width: 13.5em;
+  height: 3.7em;
+  background: #bdac8d;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-offers {
+    width: 80%;
+    max-width: 1170px;
+  }
+  .card-offers__box-image {
+    width: 100%;
+    height: auto;
+  }
+  .card-offers__box-image__image {
+    width: 100%;
+    height: 570px;
+    margin-bottom: -5em;
+  }
+  .card-offers__container {
+    padding: 3em;
+    width: 80%;
+    z-index: 1;
+    background: #fff;
+    border-top: 6px solid #bdac8d;
+  }
+  .card-offers__container__header-card {
+    margin-bottom: -2em;
+  }
+  .card-offers__container__header-card__box-title {
+    padding-bottom: 2em;
+    border-bottom: 1px solid #ececec;
+  }
+  .card-offers__container__header-card__box-price {
+    top: -90px;
+  }
+  .card-offers__container__flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .card-offers__container__flex__description {
+    margin-top: 0em;
+    width: 31em;
+  }
+  .card-offers__container__flex__box-list {
+    margin-top: 0;
+  }
+}
+.popular-rooms {
+  margin-top: 2.8em;
+  padding: 3em 0em;
+  width: 100%;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-rooms__subtitle {
+  color: #bdac8d;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.popular-rooms__title {
+  margin-top: 1.2em;
+  color: #fff;
+  font-family: "Old Standard TT", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+}
+
+.popular-rooms__swiper {
+  width: 90%;
+}
+.popular-rooms__swiper__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 2em;
+}
+.popular-rooms__swiper__wrapper__box {
+  background-color: #fff;
+  padding-bottom: 1.7em;
+  width: 100%;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-rooms__swiper__wrapper__box__image {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+.popular-rooms__swiper__wrapper__box__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-rooms__swiper__wrapper__box__text__icons {
+  margin-top: -1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+  width: 16em;
+  height: 2.5em;
+  z-index: 1;
+}
+.popular-rooms__swiper__wrapper__box__text__title {
+  margin-top: 1.6em;
+  color: #222;
+  text-align: right;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.72px;
+}
+.popular-rooms__swiper__wrapper__box__text__paragraph {
+  margin-top: 1em;
+  width: 90%;
+  color: #777;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.popular-rooms__swiper__wrapper__box__box-price {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+.popular-rooms__swiper__wrapper__box__box-price__price {
+  color: #bead8e;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.popular-rooms__swiper__wrapper__box__box-price__button {
+  color: #bdbdbd;
+  text-align: right;
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popular-rooms__swiper__scroll__button-prev {
+  margin-top: -7em;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+.popular-rooms__swiper__scroll__button-prev::after {
+  font-size: 9.6px;
+  flex-shrink: 0;
+  color: #111111;
+}
+.popular-rooms__swiper__scroll__button-next {
+  margin-top: -7em;
+  width: 32px;
+  height: 32px;
+  background: #bdac8d;
+  border: none;
+  cursor: pointer;
+}
+.popular-rooms__swiper__scroll__button-next::after {
+  font-size: 9.6px;
+  flex-shrink: 0;
+  color: #ffffff;
+}/*# sourceMappingURL=offers.css.map */

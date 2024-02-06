@@ -1,0 +1,42 @@
+.navbar {
+  margin-top: 4.4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #fff;
+  z-index: 99;
+
+  &__links {
+    padding-left: 1.2em;
+    color: #111;
+    text-align: start;
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar {
+    margin-top: 0em;
+    width: auto;
+    position: static;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    background: none;
+    justify-content: start;
+
+    &__links {
+      color: #111;
+      text-align: start;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+  }
+}

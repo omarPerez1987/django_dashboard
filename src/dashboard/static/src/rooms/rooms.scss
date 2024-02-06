@@ -1,0 +1,10 @@
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+@import "./rooms-grid/main/main-rooms";
+@import "./rooms-grid/card-rooms/card-rooms";
+
+@import "./rooms-list/main-list/main-rooms-list";
+@import "./rooms-list/card-room-list/card-room-list";

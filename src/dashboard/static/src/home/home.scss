@@ -1,0 +1,14 @@
+$primary-font: "Old Standard TT", serif;
+$secondary-font: "Archivo", sans-serif;
+$third-font: "Roboto", sans-serif;
+$color: #ffffff;
+
+@import "./navbar/navbar";
+@import "./main/main";
+@import "./check/check";
+@import "./about/about";
+@import "./rooms/rooms";
+@import "./intro-video/intro-video";
+@import "./facilities/facilities";
+@import "./menu/menu";
+@import "./info/info";

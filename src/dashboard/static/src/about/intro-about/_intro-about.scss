@@ -1,0 +1,110 @@
+.intro-about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__iframe {
+    margin-top: 3.75em;
+    width: 335px;
+    height: 186px;
+  }
+
+  &__text {
+    margin-top: 1em;
+    width: 90%;
+    color: #222;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.16px;
+  }
+
+  &__box {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1.2em;
+
+    &__icons {
+      width: 100%;
+      padding: 2em 0em;
+      width: 9.8em;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &__icons svg {
+      width: 3.75em;
+      height: 3.75em;
+    }
+
+    &__icons p {
+      color: #222;
+      text-align: center;
+      font-family: $secondary-font;
+      font-size: 0.7em;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .icon-bbq {
+      display: none;
+    }
+
+    &__icons:hover {
+      background-color: #BEAD8E;
+      & svg path {
+        fill: #fff;
+      }
+      & p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro-about {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 6em;
+
+    &__iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      max-width: 1170px;
+    }
+    &__text {
+      width: 95%;
+      font-size: 4.5rem;
+    }
+    &__box {
+      margin-top: 3em;
+      width: 100%;
+    }
+    .icon-bbq {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .intro-about {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .intro-about {
+    width: 60%;
+  }
+}

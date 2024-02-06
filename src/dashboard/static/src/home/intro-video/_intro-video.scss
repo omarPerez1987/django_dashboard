@@ -1,0 +1,112 @@
+.intro-video {
+  padding: 4em 0em 3em 0em;
+  width: 100%;
+  height: auto;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__box {
+    width: 90%;
+    &__text {
+      &__subtitle {
+        color: #bdac8d;
+        font-family: $secondary-font;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+      }
+      &__title {
+        color: #fff;
+        font-family: $primary-font;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+        margin-bottom: 0.3em;
+      }
+      &__description {
+        color: #c2c2c2;
+        font-family: $secondary-font;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 2em;
+      }
+    }
+    &__video {
+
+      &__frame {
+        margin-bottom: 2.2em;
+        height: auto;
+        aspect-ratio: 1/1;
+        width: 100%;
+      }
+    }
+    &__button {
+      &__button {
+        width: 13.5em;
+        height: 3.75em;
+        flex-shrink: 0;
+        background: #bdac8d;
+        color: #fff;
+        font-family: $secondary-font;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .intro-video {
+    padding: 0;
+    background: #ad9d82;
+    display: flex;
+    align-items: start;
+    
+    &__box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 700px;
+      width: 70%;
+      background: #222;
+      &__text {
+        width: 50%;
+
+        &__title {
+          max-width: 7.7em;
+        }
+        &__description {
+          max-width: 34em;
+        }
+      }
+      &__video {
+        position: absolute;
+        width: 30%;
+        max-width: 570px;
+        max-height: 460px;
+        right: -10%;
+        
+        &__iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__button {
+        width: 50%;
+      }
+    }
+  }
+}
