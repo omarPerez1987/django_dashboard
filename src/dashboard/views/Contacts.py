@@ -12,16 +12,17 @@ def contact_create(request, template_name='contact.html'):
             return render(request, template_name, {'data':contact})
         except Exception as e:
             return render(request, template_name, {'error': str(e)})
-
-
-def contact_view(request, id, template_name='contact.html'):
-    if request.method == 'GET':
-        try:
-            contact= get_object_or_404(Contact, id=id) 
-            return render(request, template_name, {'object':contact})
-        except Exception as e:
-            return render(request, template_name, {'error': str(e)})
-
-
-def contact(request):
     return render(request, 'contact.html')
+
+
+# def contact_view(request, id, template_name='contact.html'):
+#     if request.method == 'GET':
+#         try:
+#             contact= get_object_or_404(Contact, id=id) 
+#             return render(request, template_name, {'object':contact})
+#         except Exception as e:
+#             return render(request, template_name, {'error': str(e)})
+
+
+# def contact(request):
+#     return render(request, 'contact.html')

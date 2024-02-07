@@ -20,6 +20,8 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/paginatejs@1.4.8/dist/paginate.min.js"></script>
+
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
     <title>Hotel Miranda</title>
   </head>
@@ -83,83 +85,63 @@
       </div>
     </section>
 
-    <section class="rooms-grid" id="cardRoomsSection">
-      <a
-        href="{% url 'room_details' %}"
-        class="rooms-grid__box"
-        id="cardRoomsSectionBox"
-      >
-        <img
-          class="rooms-grid__box__image"
-          src="{% static 'public/images/rooms/pexels-max-rahubovskiy-6480198.jpg' %}"
-          alt=""
-        />
-        <div class="rooms-grid__box__text">
-          <div class="rooms-grid__box__text__icons">
-            <img
-              src="{% static 'public/icons/home/rooms/bed.svg' %}"
-              alt="icon bed"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/wifi.svg' %}"
-              alt="icon wifi"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/car.svg' %}"
-              alt="icon parking"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/cold.svg' %}"
-              alt="icon cold"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/gym.svg' %}"
-              alt="icon gym"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/smoking.svg' %}"
-              alt="icon no smoke"
-              class="rooms-grid__box__text__icons__image"
-            />
-            <img
-              src="{% static 'public/icons/home/rooms/bar.svg' %}"
-              alt="icon bar"
-              class="rooms-grid__box__text__icons__image"
-            />
+    <section class="container-rooms">
+      {% for room in rooms %}
+      <article class="rooms-grid">
+        <a href="{% url 'room_details' room.id %}" class="rooms-grid__box">
+          <img class="rooms-grid__box__image" src="{{ room.photo }}" alt="" />
+          <div class="rooms-grid__box__text">
+            <div class="rooms-grid__box__text__icons">
+              <img
+                src="{% static 'public/icons/home/rooms/bed.svg' %}"
+                alt="icon bed"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/wifi.svg' %}"
+                alt="icon wifi"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/car.svg' %}"
+                alt="icon parking"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/cold.svg' %}"
+                alt="icon cold"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/gym.svg' %}"
+                alt="icon gym"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/smoking.svg' %}"
+                alt="icon no smoke"
+                class="rooms-grid__box__text__icons__image"
+              />
+              <img
+                src="{% static 'public/icons/home/rooms/bar.svg' %}"
+                alt="icon bar"
+                class="rooms-grid__box__text__icons__image"
+              />
+            </div>
+            <h2 class="rooms-grid__box__text__title">{{ room.room }}</h2>
+            <p class="rooms-grid__box__text__paragraph">
+              {{ room.description }}
+            </p>
           </div>
-          <h2 class="rooms-grid__box__text__title">Minimal Duplex Room</h2>
-          <p class="rooms-grid__box__text__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do
-            eiusmod tempor.
-          </p>
-        </div>
-        <div class="rooms-grid__box__box-price">
-          <p class="rooms-grid__box__box-price__price">
-            $345 <span>/Night</span>
-          </p>
-          <button class="rooms-grid__box__box-price__button"></button>
-        </div>
-      </a>
-    </section>
-
-    <section class="pagination">
-      <div class="pagination__rooms">
-        <button class="pagination__rooms__move" id="previous">
-          <img src="{% static 'public/icons/rooms/arrow-prev.svg' %}" alt="" />
-        </button>
-        <button class="pagination__rooms__page" id="page1">1</button>
-        <button class="pagination__rooms__page" id="page2">2</button>
-        <button class="pagination__rooms__page" id="page3">3</button>
-        <button class="pagination__rooms__page" id="page4">...</button>
-        <button class="pagination__rooms__move" id="next">
-          <img src="{% static 'public/icons/rooms/arrow-next.svg' %}" alt="" />
-        </button>
-      </div>
+          <div class="rooms-grid__box__box-price">
+            <p class="rooms-grid__box__box-price__price">
+              {{ room.price }} <span>/Night</span>
+            </p>
+            <button class="rooms-grid__box__box-price__button"></button>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
     </section>
 
     <footer class="footer">
@@ -263,7 +245,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="{% static 'scripts/navbar.js' %}"></script>
     <script type="module" src="{% static 'scripts/swipers.js' %}"></script>
-    <script type="module" src="{% static 'scripts/pagination.js' %}"></script>
+    <!-- <script type="module" src="{% static 'scripts/pagination.js' %}"></script> -->
     <script type="module" src="{% static 'scripts/header.js' %}"></script>
   </body>
 </html>

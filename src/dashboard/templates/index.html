@@ -78,10 +78,10 @@
       <h1 class="main__title">The Perfect Base For You</h1>
       <div class="main__box">
         <button class="main__box__button__beige">
-          <a href="{% url 'rooms' %}">TAKE A TOUR</a>
+          <a href="{% url 'about' %}">TAKE A TOUR</a>
         </button>
         <button class="main__box__button__black">
-          <a href="{% url 'about' %}">LEARN MORE</a>
+          <a href="{% url 'contacts' %}">LEARN MORE</a>
         </button>
       </div>
     </main>
@@ -108,7 +108,9 @@
           />
         </div>
       </div>
-      <button class="check__button">CHECK AVAILABILITY</button>
+      <button class="check__button">
+        <a href="{% url 'rooms_list' %}">CHECK AVAILABILITY</a>
+      </button>
     </section>
 
     <section class="about">

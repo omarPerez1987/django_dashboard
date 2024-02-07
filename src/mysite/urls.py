@@ -24,19 +24,17 @@ from dashboard.views.render_html import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('home/', home_html, name='home'),
+    path('', home_html, name='home'),
     path('about/', about_html, name='about'),
 
 
-    path('rooms/', rooms, name='rooms'),
-    # path('rooms_details/<int:id>/', room_view, name='room_view'),
-    path('rooms_details/', room_details_html, name='room_details'),
-    path('rooms_list/', room_listar, name='room_list'),
-    path('bookings/', create_booking, name='bookings'),
-    path('offers/', offers_html, name='offers'),
+    path('rooms/', rooms_get_all, name='rooms'),
+    path('rooms_list', rooms_available, name='rooms_list'),
+    path('rooms_details/<int:id>/', room_details, name='room_details'),
+    path('offers/', rooms_offers, name='offers'),
 
     # path('contacts/', contact_view, name='contacts'),
-    path('contacts/', contact, name='contacts'),
+    path('contacts/', contact_create, name='contacts'),
 
 
 ]

@@ -76,19 +76,20 @@
         class="main-about__img"
         src="{% static 'public/images/contact/pexels-adrien-olichon-2387793.jpg' %}"
         alt=""
-      />
-      <div class="main-about__box">
-        <a class="main-about__box__home" href="{% url 'home' %}"
+        />
+        <div class="main-about__box">
+          <a class="main-about__box__home" href="{% url 'home' %}"
           >Home | <span>Rooms</span></a
-        >
-      </div>
-    </section>
-
+          >
+        </div>
+      </section>
+      
+    {% for room in rooms %}
     <section class="rooms-list" id="cardRoomsSection">
       <article class="rooms-list__box" id="cardRoomsSectionBox">
         <img
           class="rooms-list__box__image"
-          src="{% static 'public/images/rooms/pexels-max-rahubovskiy-6480198.jpg' %}"
+          src="{{ room.photo }}"
           alt=""
         />
         <div class="rooms-list__box__text">
@@ -129,26 +130,24 @@
               class="rooms-list__box__text__icons__image"
             />
           </div>
-          <h2 class="rooms-list__box__text__title">Minimal Duplex Room</h2>
+          <h2 class="rooms-list__box__text__title">Minimal {{ room.room }}</h2>
           <p class="rooms-list__box__text__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {{ room.description }}
           </p>
         </div>
         <div class="rooms-list__box__box-price">
           <p class="rooms-list__box__box-price__price">
-            $345 <span>/Night</span>
+            {{ room.price }} <span>/Night</span>
           </p>
-          <a href="./rooms-details.html"
+          <a href="{% url 'room_details' room.id %}"
             ><button class="rooms-list__box__box-price__button"></button
           ></a>
         </div>
       </article>
     </section>
+    {% endfor %}
 
-    <section class="pagination">
+    <!-- <section class="pagination">
       <div class="pagination__rooms">
         <button class="pagination__rooms__move" id="previous">
           <img src="{% static 'public/icons/rooms/arrow-prev.svg' %}" alt="" />
@@ -161,7 +160,7 @@
           <img src="{% static 'public/icons/rooms/arrow-next.svg' %}" alt="" />
         </button>
       </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
       <div class="footer__box">
@@ -264,7 +263,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="{% static 'scripts/navbar.js' %}"></script>
     <script type="module" src="{% static 'scripts/swipers.js' %}"></script>
-    <script type="module" src="{% static 'scripts/pagination.js' %}"></script>
     <script type="module" src="{% static 'scripts/header.js' %}"></script>
   </body>
 </html>

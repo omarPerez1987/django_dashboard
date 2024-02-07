@@ -88,11 +88,13 @@
       </div>
     </section>
 
+    {% for room in rooms %}
+    {% if room.discount != 0 %}
     <section class="card-offers">
       <div class="card-offers__box-image">
         <img
           class="card-offers__box-image__image"
-          src="{% static 'public/images/offers/pexels-elina-sazonova-1838554.jpg' %}"
+          src="{{ room.photo }}"
           alt=""
         />
       </div>
@@ -102,656 +104,83 @@
             <h3
               class="card-offers__container__header-card__box-title__subtitle"
             >
-              Double Bed
+              {{ room.room }}
             </h3>
             <h1 class="card-offers__container__header-card__box-title__title">
-              Luxury Double Bed
+              Luxury {{ room.room }}
             </h1>
           </div>
           <div class="card-offers__container__header-card__box-price">
             <div
               class="card-offers__container__header-card__box-price__strikethrough"
             >
-              <h5>$500</h5>
+              <h5>{{ room.price }}</h5>
               <span>/Night</span>
             </div>
             <h5 class="card-offers__container__header-card__box-price__offer">
-              $345<span>/Night</span>
+              {{ room.discounted_price }}<span>/Night</span>
             </h5>
           </div>
         </div>
         <div class="card-offers__container__flex">
           <div class="card-offers__container__flex__description">
             <p class="card-offers__container__flex__description__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehend erit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              {{ room.description }}
             </p>
           </div>
 
           <div class="card-offers__container__flex__box-list">
             <ul class="card-offers__container__flex__box-list__list">
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/air.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Air conditioner
-                </span>
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/wifi.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >High speed WiFi</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/breakfast.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Breakfast</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/kitchen.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Kitchen</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Cleaning</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/shower.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shower</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Grocery</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/bed.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Single bed</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/grocery.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shop near</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/towels.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Towels</span
-                >
-              </li>
+              {% for amenity in amenities %}
+                {% if amenity in room.facilities %}
+                  <li class="card-offers__container__flex__box-list__list__items">
+                    {% if amenity == 'Air conditioner' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/air.svg' %}" alt="" />
+                    {% elif amenity == 'High speed WiFi' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/wifi.svg' %}" alt="" />
+                    {% elif amenity == 'Breakfast' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/breakfast.svg' %}" alt="" />
+                    {% elif amenity == 'Kitchen' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/kitchen.svg' %}" alt="" />
+                    {% elif amenity == 'Cleaning' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
+                    {% elif amenity == 'Shower' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/shower.svg' %}" alt="" />
+                    {% elif amenity == 'Grocery' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
+                    {% elif amenity == 'Single bed' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/bed.svg' %}" alt="" />
+                    {% elif amenity == 'Shop near' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/grocery.svg' %}" alt="" />
+                    {% elif amenity == 'Towels' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/towels.svg' %}" alt="" />
+                    {% elif amenity == '24/7 Online Support' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/shop.svg' %}" alt="" />
+                    {% elif amenity == 'Strong Locker' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/strong locker.svg' %}" alt="" />
+                    {% elif amenity == 'Smart Security' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/security.svg' %}" alt="" />
+                    {% elif amenity == 'Expert Team' %}
+                      <img class="card-offers__container__flex__box-list__list__items__icon" src="{% static 'public/icons/room-details/team.svg' %}" alt="" />
+                    {% endif %}
+                    <span class="card-offers__container__flex__box-list__list__items__text">{{ amenity }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
             </ul>
+            
           </div>
         </div>
         <div class="card-offers__container__box-button">
           <button class="card-offers__container__box-button__button">
-            <a href="./rooms-details.html"> Book Now </a>
+            <a href="{% url 'room_details' room.id %}"> Book Now </a>
           </button>
         </div>
       </article>
     </section>
-    <section class="card-offers">
-      <div class="card-offers__box-image">
-        <img
-          class="card-offers__box-image__image"
-          src="{% static 'public/images/offers/pexels-elina-sazonova-1838554.jpg' %}"
-          alt=""
-        />
-      </div>
-      <article class="card-offers__container">
-        <div class="card-offers__container__header-card">
-          <div class="card-offers__container__header-card__box-title">
-            <h3
-              class="card-offers__container__header-card__box-title__subtitle"
-            >
-              Double Bed
-            </h3>
-            <h1 class="card-offers__container__header-card__box-title__title">
-              Luxury Double Bed
-            </h1>
-          </div>
-          <div class="card-offers__container__header-card__box-price">
-            <div
-              class="card-offers__container__header-card__box-price__strikethrough"
-            >
-              <h5>$500</h5>
-              <span>/Night</span>
-            </div>
-            <h5 class="card-offers__container__header-card__box-price__offer">
-              $345<span>/Night</span>
-            </h5>
-          </div>
-        </div>
-        <div class="card-offers__container__flex">
-          <div class="card-offers__container__flex__description">
-            <p class="card-offers__container__flex__description__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehend erit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          </div>
-
-          <div class="card-offers__container__flex__box-list">
-            <ul class="card-offers__container__flex__box-list__list">
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/air.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Air conditioner
-                </span>
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/wifi.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >High speed WiFi</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/breakfast.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Breakfast</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/kitchen.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Kitchen</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Cleaning</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/shower.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shower</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Grocery</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/bed.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Single bed</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/grocery.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shop near</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/towels.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Towels</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-offers__container__box-button">
-          <button class="card-offers__container__box-button__button">
-            <a href="./rooms-details.html"> Book Now </a>
-          </button>
-        </div>
-      </article>
-    </section>
-    <section class="card-offers">
-      <div class="card-offers__box-image">
-        <img
-          class="card-offers__box-image__image"
-          src="{% static 'public/images/offers/pexels-elina-sazonova-1838554.jpg' %}"
-          alt=""
-        />
-      </div>
-      <article class="card-offers__container">
-        <div class="card-offers__container__header-card">
-          <div class="card-offers__container__header-card__box-title">
-            <h3
-              class="card-offers__container__header-card__box-title__subtitle"
-            >
-              Double Bed
-            </h3>
-            <h1 class="card-offers__container__header-card__box-title__title">
-              Luxury Double Bed
-            </h1>
-          </div>
-          <div class="card-offers__container__header-card__box-price">
-            <div
-              class="card-offers__container__header-card__box-price__strikethrough"
-            >
-              <h5>$500</h5>
-              <span>/Night</span>
-            </div>
-            <h5 class="card-offers__container__header-card__box-price__offer">
-              $345<span>/Night</span>
-            </h5>
-          </div>
-        </div>
-        <div class="card-offers__container__flex">
-          <div class="card-offers__container__flex__description">
-            <p class="card-offers__container__flex__description__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehend erit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          </div>
-
-          <div class="card-offers__container__flex__box-list">
-            <ul class="card-offers__container__flex__box-list__list">
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/air.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Air conditioner
-                </span>
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/wifi.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >High speed WiFi</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/breakfast.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Breakfast</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/kitchen.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Kitchen</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Cleaning</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/shower.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shower</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Grocery</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/bed.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Single bed</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/grocery.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shop near</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/towels.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Towels</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-offers__container__box-button">
-          <button class="card-offers__container__box-button__button">
-            <a href="./rooms-details.html"> Book Now </a>
-          </button>
-        </div>
-      </article>
-    </section>
-    <section class="card-offers">
-      <div class="card-offers__box-image">
-        <img
-          class="card-offers__box-image__image"
-          src="{% static 'public/images/offers/pexels-elina-sazonova-1838554.jpg' %}"
-          alt=""
-        />
-      </div>
-      <article class="card-offers__container">
-        <div class="card-offers__container__header-card">
-          <div class="card-offers__container__header-card__box-title">
-            <h3
-              class="card-offers__container__header-card__box-title__subtitle"
-            >
-              Double Bed
-            </h3>
-            <h1 class="card-offers__container__header-card__box-title__title">
-              Luxury Double Bed
-            </h1>
-          </div>
-          <div class="card-offers__container__header-card__box-price">
-            <div
-              class="card-offers__container__header-card__box-price__strikethrough"
-            >
-              <h5>$500</h5>
-              <span>/Night</span>
-            </div>
-            <h5 class="card-offers__container__header-card__box-price__offer">
-              $345<span>/Night</span>
-            </h5>
-          </div>
-        </div>
-        <div class="card-offers__container__flex">
-          <div class="card-offers__container__flex__description">
-            <p class="card-offers__container__flex__description__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehend erit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          </div>
-
-          <div class="card-offers__container__flex__box-list">
-            <ul class="card-offers__container__flex__box-list__list">
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/air.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Air conditioner
-                </span>
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/wifi.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >High speed WiFi</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/breakfast.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Breakfast</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/kitchen.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Kitchen</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Cleaning</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/shower.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shower</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/cleaning.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Grocery</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/bed.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Single bed</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/grocery.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Shop near</span
-                >
-              </li>
-              <li class="card-offers__container__flex__box-list__list__items">
-                <img
-                  class="card-offers__container__flex__box-list__list__items__icon"
-                  src="{% static 'public/icons/room-details/towels.svg' %}"
-                  alt=""
-                />
-                <span
-                  class="card-offers__container__flex__box-list__list__items__text"
-                  >Towels</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-offers__container__box-button">
-          <button class="card-offers__container__box-button__button">
-            <a href="./rooms-details.html"> Book Now </a>
-          </button>
-        </div>
-      </article>
-    </section>
+    {% endif %}
+    {% endfor %}
+    
 
     <footer class="footer">
       <div class="footer__box">

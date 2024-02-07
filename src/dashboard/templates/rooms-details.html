@@ -84,27 +84,28 @@
       </div>
     </section>
 
+    {% if error %}
+    <p>Error: {{ error }}</p>
+    {% else %}
+
     <section class="info-check">
       <article class="info-check__container">
         <div class="info-check__container__text-and-img">
           <div class="info-check__container__text-and-img__text">
             <div>
               <h3 class="info-check__container__text-and-img__text__subtitle">
-                Double Bed
+                {{ data.room }}
               </h3>
               <h1 class="info-check__container__text-and-img__text__title">
-                Luxury Double Bed
+                Luxury {{ data.room }}
               </h1>
             </div>
             <p class="info-check__container__text-and-img__text__price">
-              $345<span>/Night</span>
+              ${{ data.discounted_price }}<span>/Night</span>
             </p>
           </div>
           <div class="info-check__container__text-and-img__image">
-            <img
-              src="{% static 'public/images/room-details/pexels-max-rahubovskiy-7214471.jpg' %}"
-              alt=""
-            />
+            <img src="{{ data.photo }}" alt="" />
           </div>
         </div>
         <div class="info-check__container__check">
@@ -131,141 +132,51 @@
             </button>
           </form>
         </div>
-        <p class="info-check__container__paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-          inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-          quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-          voluptatem.
-        </p>
+        <p class="info-check__container__paragraph">{{ data.description }}</p>
       </article>
     </section>
+
+    {% endif %}
+
     <section class="amenities">
       <h3 class="amenities__title">Amenities</h3>
       <ul class="amenities__list">
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/air.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Air conditioner </span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/wifi.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">High speed WiFi</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/breakfast.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Breakfast</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/kitchen.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Kitchen</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/cleaning.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Cleaning</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/shower.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Shower</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/cleaning.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Grocery</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/bed.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Single bed</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/grocery.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Shop near</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/towels.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Towels</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/shop.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">24/7 Online Support</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/strong locker.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Strong Locker</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/security.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Smart Security</span>
-        </li>
-        <li class="amenities__list__items">
-          <img
-            class="amenities__list__items__icon"
-            src="{% static 'public/icons/room-details/team.svg' %}"
-            alt=""
-          />
-          <span class="amenities__list__items__text">Expert Team</span>
-        </li>
+        {% for amenity in amenities %}
+          {% if amenity in data.facilities %}
+          <li class="amenities__list__items">
+            {% if amenity == 'Air conditioner' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/air.svg' %}" alt="" />
+            {% elif amenity == 'High speed WiFi' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/wifi.svg' %}" alt="" />
+            {% elif amenity == 'Breakfast' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/breakfast.svg' %}" alt="" />
+            {% elif amenity == 'Kitchen' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/kitchen.svg' %}" alt="" />
+            {% elif amenity == 'Cleaning' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
+            {% elif amenity == 'Shower' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/shower.svg' %}" alt="" />
+            {% elif amenity == 'Grocery' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
+            {% elif amenity == 'Single bed' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/bed.svg' %}" alt="" />
+            {% elif amenity == 'Shop near' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/grocery.svg' %}" alt="" />
+            {% elif amenity == 'Towels' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/towels.svg' %}" alt="" />
+            {% elif amenity == '24/7 Online Support' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/shop.svg' %}" alt="" />
+            {% elif amenity == 'Strong Locker' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/strong locker.svg' %}" alt="" />
+            {% elif amenity == 'Smart Security' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/security.svg' %}" alt="" />
+            {% elif amenity == 'Expert Team' %}
+            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/team.svg' %}" alt="" />
+            {% endif %}
+            <span class="amenities__list__items__text">{{ amenity }}</span>
+          </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </section>
 
@@ -291,22 +202,23 @@
       </article>
     </section>
 
+    {% if data %}
     <section class="cancelation">
       <h3 class="cancelation__title">Cancellation</h3>
       <p class="cancelation__text">
-        Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis.
-        Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque
-        orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full
-        refund.
+        {{data.cancel}}
       </p>
     </section>
+    {% endif %}
 
     <section class="swiper related-rooms" id="swiperRelatedRooms">
       <div class="swiper-wrapper">
+        {% for room in rooms %}
+        {% if room.status == "available" %}
         <article class="swiper-slide related-rooms__box">
           <img
             class="related-rooms__box__image"
-            src="{% static 'public/images/rooms/pexels-max-rahubovskiy-6480198.jpg' %}"
+            src="{{ room.photo }}"
             alt=""
           />
           <div class="related-rooms__box__text">
@@ -347,82 +259,23 @@
                 class="related-rooms__box__text__icons__image"
               />
             </div>
-            <h2 class="related-rooms__box__text__title">Minimal Duplex Room</h2>
+            <h2 class="related-rooms__box__text__title">Minimal {{ room.room }}</h2>
             <p class="related-rooms__box__text__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do
-              eiusmod tempor.
+              {{ room.description }}
             </p>
           </div>
           <div class="related-rooms__box__box-price">
             <p class="related-rooms__box__box-price__price">
-              $345 <span>/Night</span>
+              {{ room.price }} <span>/Night</span>
             </p>
-            <a href="{% url 'contacts' %}">
+            <a href="{% url 'room_details' room.id %}">
               <button class="related-rooms__box__box-price__button"></button>
             </a>
           </div>
         </article>
-        <article class="swiper-slide related-rooms__box">
-          <img
-            class="related-rooms__box__image"
-            src="{% static 'public/images/rooms/pexels-max-rahubovskiy-6480198.jpg' %}"
-            alt=""
-          />
-          <div class="related-rooms__box__text">
-            <div class="related-rooms__box__text__icons">
-              <img
-                src="{% static 'public/icons/home/rooms/bed.svg' %}"
-                alt="icon bed"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/wifi.svg' %}"
-                alt="icon wifi"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/car.svg' %}"
-                alt="icon parking"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/cold.svg' %}"
-                alt="icon cold"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/gym.svg' %}"
-                alt="icon gym"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/smoking.svg' %}"
-                alt="icon no smoke"
-                class="related-rooms__box__text__icons__image"
-              />
-              <img
-                src="{% static 'public/icons/home/rooms/bar.svg' %}"
-                alt="icon bar"
-                class="related-rooms__box__text__icons__image"
-              />
-            </div>
-            <h2 class="related-rooms__box__text__title">Minimal Duplex Room</h2>
-            <p class="related-rooms__box__text__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-          <div class="related-rooms__box__box-price">
-            <p class="related-rooms__box__box-price__price">
-              $345 <span>/Night</span>
-            </p>
-            <a href="{% url 'contacts' %}">
-              <button class="related-rooms__box__box-price__button"></button>
-            </a>
-          </div>
-        </article>
+        {% endif %}
+    {% endfor %}
       </div>
-
       <div class="related-rooms__scroll">
         <button
           class="swiper-button-prev related-rooms__scroll__button-prev"
@@ -432,6 +285,7 @@
         ></button>
       </div>
     </section>
+
 
     <footer class="footer">
       <div class="footer__box">
