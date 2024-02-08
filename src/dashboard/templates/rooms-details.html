@@ -108,30 +108,44 @@
             <img src="{{ data.photo }}" alt="" />
           </div>
         </div>
-        <div class="info-check__container__check">
+
+        <article class="info-check__container__check">
           <h4 class="info-check__container__check__title">
-            Check Availability
+            Make your reservation
           </h4>
-          <form class="info-check__container__check__form" action="">
-            <label class="info-check__container__check__form__label" for=""
-              >Check In</label
+
+          <form class="info-check__container__check__form" method="POST">
+            
+            {% csrf_token %}
+            <label class="info-check__container__check__form__label" for="">
+              Your name
+            </label>
+            {{ form.name }}
+
+            <label class="info-check__container__check__form__label" for="">
+              Check In
+            </label>
+            {{ form.checkin}}
+
+            <label class="info-check__container__check__form__label" for="">
+              Check Out
+            </label>
+            {{ form.checkout}}
+
+            <label class="info-check__container__check__form__label" for="">
+              Notes
+            </label>
+            {{ form.notes}}
+
+            <button
+              class="info-check__container__check__form__button"
+              type="submit"
             >
-            <input
-              class="info-check__container__check__form__input"
-              type="date"
-            />
-            <label class="info-check__container__check__form__label" for=""
-              >Check Out</label
-            >
-            <input
-              class="info-check__container__check__form__input"
-              type="date"
-            />
-            <button class="info-check__container__check__form__button">
-              Check Availability
+              book now
             </button>
           </form>
-        </div>
+        </article>
+
         <p class="info-check__container__paragraph">{{ data.description }}</p>
       </article>
     </section>
@@ -141,42 +155,96 @@
     <section class="amenities">
       <h3 class="amenities__title">Amenities</h3>
       <ul class="amenities__list">
-        {% for amenity in amenities %}
-          {% if amenity in data.facilities %}
-          <li class="amenities__list__items">
-            {% if amenity == 'Air conditioner' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/air.svg' %}" alt="" />
-            {% elif amenity == 'High speed WiFi' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/wifi.svg' %}" alt="" />
-            {% elif amenity == 'Breakfast' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/breakfast.svg' %}" alt="" />
-            {% elif amenity == 'Kitchen' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/kitchen.svg' %}" alt="" />
-            {% elif amenity == 'Cleaning' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
-            {% elif amenity == 'Shower' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/shower.svg' %}" alt="" />
-            {% elif amenity == 'Grocery' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/cleaning.svg' %}" alt="" />
-            {% elif amenity == 'Single bed' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/bed.svg' %}" alt="" />
-            {% elif amenity == 'Shop near' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/grocery.svg' %}" alt="" />
-            {% elif amenity == 'Towels' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/towels.svg' %}" alt="" />
-            {% elif amenity == '24/7 Online Support' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/shop.svg' %}" alt="" />
-            {% elif amenity == 'Strong Locker' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/strong locker.svg' %}" alt="" />
-            {% elif amenity == 'Smart Security' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/security.svg' %}" alt="" />
-            {% elif amenity == 'Expert Team' %}
-            <img class="amenities__list__items__icon" src="{% static 'public/icons/room-details/team.svg' %}" alt="" />
-            {% endif %}
-            <span class="amenities__list__items__text">{{ amenity }}</span>
-          </li>
+        {% for amenity in amenities %} {% if amenity in data.facilities %}
+        <li class="amenities__list__items">
+          {% if amenity == 'Air conditioner' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/air.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'High speed WiFi' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/wifi.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Breakfast' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/breakfast.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Kitchen' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/kitchen.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Cleaning' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/cleaning.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Shower' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/shower.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Grocery' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/cleaning.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Single bed' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/bed.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Shop near' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/grocery.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Towels' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/towels.svg' %}"
+            alt=""
+          />
+          {% elif amenity == '24/7 Online Support' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/shop.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Strong Locker' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/strong locker.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Smart Security' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/security.svg' %}"
+            alt=""
+          />
+          {% elif amenity == 'Expert Team' %}
+          <img
+            class="amenities__list__items__icon"
+            src="{% static 'public/icons/room-details/team.svg' %}"
+            alt=""
+          />
           {% endif %}
-        {% endfor %}
+          <span class="amenities__list__items__text">{{ amenity }}</span>
+        </li>
+        {% endif %} {% endfor %}
       </ul>
     </section>
 
@@ -205,16 +273,13 @@
     {% if data %}
     <section class="cancelation">
       <h3 class="cancelation__title">Cancellation</h3>
-      <p class="cancelation__text">
-        {{data.cancel}}
-      </p>
+      <p class="cancelation__text">{{data.cancel}}</p>
     </section>
     {% endif %}
 
     <section class="swiper related-rooms" id="swiperRelatedRooms">
       <div class="swiper-wrapper">
-        {% for room in rooms %}
-        {% if room.status == "available" %}
+        {% for room in rooms %} {% if room.status == "available" %}
         <article class="swiper-slide related-rooms__box">
           <img
             class="related-rooms__box__image"
@@ -259,7 +324,9 @@
                 class="related-rooms__box__text__icons__image"
               />
             </div>
-            <h2 class="related-rooms__box__text__title">Minimal {{ room.room }}</h2>
+            <h2 class="related-rooms__box__text__title">
+              Minimal {{ room.room }}
+            </h2>
             <p class="related-rooms__box__text__paragraph">
               {{ room.description }}
             </p>
@@ -273,8 +340,7 @@
             </a>
           </div>
         </article>
-        {% endif %}
-    {% endfor %}
+        {% endif %} {% endfor %}
       </div>
       <div class="related-rooms__scroll">
         <button
@@ -285,7 +351,6 @@
         ></button>
       </div>
     </section>
-
 
     <footer class="footer">
       <div class="footer__box">

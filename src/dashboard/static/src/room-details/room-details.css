@@ -105,6 +105,15 @@
   background: #f8f8f8;
   border: none;
 }
+.info-check__container__check__form__textarea {
+  width: 80%;
+  margin-top: 0.5em;
+  padding: 0em 1.8em;
+  height: 10.7em;
+  background: #f8f8f8;
+  font-family: "Archivo", sans-serif;
+  border: none;
+}
 .info-check__container__check__form__button {
   margin-top: 1.2em;
   width: 100%;
