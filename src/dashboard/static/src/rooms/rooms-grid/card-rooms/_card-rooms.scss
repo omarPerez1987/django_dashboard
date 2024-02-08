@@ -8,7 +8,7 @@
     width: 90%;
     margin-top: 3em;
     text-align: center;
-
+    
     &__image {
       width: 100%;
       height: auto;
@@ -137,33 +137,45 @@
   .rooms-grid__box {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    height: auto;
+    position: relative;
+
     &__image {
       width: 40%;
+      height: 300px;
     }
+
     &__text {
-      margin-top: 2em;
       display: flex;
       flex-direction: column;
-      align-items: start;
-      width: 40%;
-      padding-left: 1em;
+      justify-content: left;
+      width: auto;
+      position: relative;
+      width: 100%;
+      
       &__icons {
-        width: 80%;
+        width: 100%;
+        margin: 0rem 0rem 1rem 0rem;
       }
 
       &__title {
+        margin: 0;
         text-align: start;
         width: auto;
       }
       &__paragraph {
-        width: 13.5em;
+        width: 90%;
         text-align: start;
       }
     }
     &__box-price {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      width: 60%;
+      margin: 0 auto;
+
       &__price {
         text-align: start;
       }
@@ -187,16 +199,17 @@
         padding-bottom: 1.7em;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 370px;
-        height: 550px;
+        height: auto;
+        min-height: 550px;
         text-align: center;
         box-shadow: 0px 8px 16px 0px rgba(73, 73, 73, 0.05);
 
         &__image {
           width: 23em;
-          height: auto;
+          max-height: 250px;
         }
 
         &__text {
@@ -205,6 +218,7 @@
           align-items: center;
           width: 100%;
           padding-left: 0px;
+          margin-bottom: 1rem;
 
           &__icons {
             margin-top: -2.5em;
@@ -216,7 +230,7 @@
           }
         }
         &__box-price {
-          width: auto;
+          width: 100%;
           display: flex;
           flex-direction: row;
           justify-content: center;

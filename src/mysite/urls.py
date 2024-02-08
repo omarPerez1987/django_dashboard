@@ -33,7 +33,6 @@ urlpatterns = [
     path('rooms_details/<int:id>/', room_details, name='room_details'),
     path('offers/', rooms_offers, name='offers'),
 
-    # path('contacts/', contact_view, name='contacts'),
     path('contacts/', contact_create, name='contacts'),
 
 

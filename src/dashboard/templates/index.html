@@ -86,32 +86,32 @@
       </div>
     </main>
 
-    <section class="check">
+    <form class="check" method="GET" action="{% url 'rooms_list' %}">
       <div class="check__container">
         <label class="check__container__label">Arrival Date</label>
         <div class="check__container__box-input">
           <input
             class="check__container__box-input__input"
-            placeholder="24th march 2020"
+            name="arrival_date"
             type="date"
+            required
           />
         </div>
       </div>
-
+    
       <div class="check__container">
-        <label class="check__container__label">LeDeparture Date</label>
+        <label class="check__container__label">Departure Date</label>
         <div class="check__container__box-input">
           <input
             class="check__container__box-input__input"
-            placeholder="30th march 2020"
+            name="departure_date"
             type="date"
+            required
           />
         </div>
       </div>
-      <button class="check__button">
-        <a href="{% url 'rooms_list' %}">CHECK AVAILABILITY</a>
-      </button>
-    </section>
+      <button class="check__button" type="submit">CHECK AVAILABILITY</button>
+    </form>    
 
     <section class="about">
       <article class="about__container">

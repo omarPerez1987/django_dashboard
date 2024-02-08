@@ -156,7 +156,8 @@
     </section>
 
     <section class="form-contact">
-      <form class="form-contact__form" action="">
+      <form class="form-contact__form" method="POST">
+        {% csrf_token %}
         <div class="form-contact__form__column">
           <label class="form-contact__form__column__box">
             <img
@@ -164,11 +165,15 @@
               src="{% static 'public/icons/contact/form/user.svg' %}"
               alt="icon user"
             />
-            <input
-              class="form-contact__form__column__box__input"
-              placeholder="Your full name"
-              type="text"
+            {{ form.name }}
+          </label>
+          <label class="form-contact__form__column__box">
+            <img
+              class="form-contact__form__column__box__img"
+              src="{% static 'public/icons/contact/form/user.svg' %}"
+              alt="icon user"
             />
+            {{ form.last_name }}
           </label>
           <label class="form-contact__form__column__box">
             <img
@@ -176,38 +181,16 @@
               src="{% static 'public/icons/contact/form/phone.svg' %}"
               alt="icon telephone"
             />
-            <input
-              class="form-contact__form__column__box__input"
-              placeholder="Add phone number"
-              type="number"
-            />
+            {{ form.telephone }}
           </label>
-        </div>
-        <div class="form-contact__form__column">
+
           <label class="form-contact__form__column__box">
             <img
               class="form-contact__form__column__box__img"
               src="{% static 'public/icons/contact/form/email.svg' %}"
               alt="icon email"
             />
-            <input
-              class="form-contact__form__column__box__input"
-              placeholder="Enter email address"
-              type="email"
-            />
-          </label>
-          <label class="form-contact__form__column__box">
-            <img
-              class="form-contact__form__column__box__img"
-              src="{% static 'public/icons/contact/form/subject.svg' %}"
-              alt="icon subject"
-            />
-            <input
-              class="form-contact__form__column__box__input"
-              class="form-contact__form_input"
-              placeholder="Enter subject"
-              type="text"
-            />
+            {{ form.email }}
           </label>
         </div>
 
@@ -218,10 +201,7 @@
               src="{% static 'public/icons/contact/form/message.svg' %}"
               alt="icon pen"
             />
-            <textarea
-              class="form-contact__form__flex__boxarea__textarea"
-              placeholder="Enter message"
-            ></textarea>
+            {{ form.review }}
           </label>
 
           <div class="form-contact__form__flex__box-button">

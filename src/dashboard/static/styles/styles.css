@@ -286,7 +286,7 @@ ul {
   margin-bottom: 1em;
   display: flex;
   flex-direction: row-reverse;
-  gap: 0.2em;
+  gap: 1.5em;
   font-size: 1.2rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -295,9 +295,11 @@ ul {
   outline: none;
   background: none;
   color: #bead8e;
-  width: 90%;
+  width: 100%;
+  cursor: pointer;
 }
 .check__container__box-input__input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
   filter: invert(100%) sepia(90%) saturate(1000%) brightness(95%) contrast(30%);
 }
 .check__button {
@@ -1824,33 +1826,41 @@ ul {
   .rooms-grid__box {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    height: auto;
+    position: relative;
   }
   .rooms-grid__box__image {
     width: 40%;
+    height: 300px;
   }
   .rooms-grid__box__text {
-    margin-top: 2em;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    width: 40%;
-    padding-left: 1em;
+    justify-content: left;
+    width: auto;
+    position: relative;
+    width: 100%;
   }
   .rooms-grid__box__text__icons {
-    width: 80%;
+    width: 100%;
+    margin: 0rem 0rem 1rem 0rem;
   }
   .rooms-grid__box__text__title {
+    margin: 0;
     text-align: start;
     width: auto;
   }
   .rooms-grid__box__text__paragraph {
-    width: 13.5em;
+    width: 90%;
     text-align: start;
   }
   .rooms-grid__box__box-price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 60%;
+    margin: 0 auto;
   }
   .rooms-grid__box__box-price__price {
     text-align: start;
@@ -1872,16 +1882,17 @@ ul {
     padding-bottom: 1.7em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 370px;
-    height: 550px;
+    height: auto;
+    min-height: 550px;
     text-align: center;
     box-shadow: 0px 8px 16px 0px rgba(73, 73, 73, 0.05);
   }
   .container-rooms .rooms-grid__box__image {
     width: 23em;
-    height: auto;
+    max-height: 250px;
   }
   .container-rooms .rooms-grid__box__text {
     display: flex;
@@ -1889,6 +1900,7 @@ ul {
     align-items: center;
     width: 100%;
     padding-left: 0px;
+    margin-bottom: 1rem;
   }
   .container-rooms .rooms-grid__box__text__icons {
     margin-top: -2.5em;
@@ -1898,7 +1910,7 @@ ul {
     width: 90%;
   }
   .container-rooms .rooms-grid__box__box-price {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2271,6 +2283,7 @@ ul {
 .info-check__container__paragraph {
   margin-top: 1.5em;
   max-width: 43.2em;
+  color: #777;
 }
 
 @media screen and (min-width: 1300px) {

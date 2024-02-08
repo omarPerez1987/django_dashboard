@@ -1,28 +1,27 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views import View
-from dashboard.models import Contact
-
-
+from django.shortcuts import render, redirect
+from dashboard.models import *
+from dashboard.forms import *
+from django.contrib import messages 
+from django.shortcuts import redirect
+from datetime import datetime
 
 def contact_create(request, template_name='contact.html'):
     if request.method == 'POST':
         try:
-            contact = Contact(request.POST or None)
-            contact.save()
-            return render(request, template_name, {'data':contact})
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                contact = form.save(commit=False)
+                contact.photo = 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/857.jpg'
+                contact.date = datetime.now().strftime('%Y-%m-%d')
+                contact.hour = datetime.now().strftime('%H:%M:%S')
+                contact.archived = False
+                print(contact)
+                contact.save()
+                messages.success(request, 'El formulario se ha enviado con éxito.')
+                return redirect('home')
         except Exception as e:
             return render(request, template_name, {'error': str(e)})
-    return render(request, 'contact.html')
+    else:
+        form = ContactForm()
 
-
-# def contact_view(request, id, template_name='contact.html'):
-#     if request.method == 'GET':
-#         try:
-#             contact= get_object_or_404(Contact, id=id) 
-#             return render(request, template_name, {'object':contact})
-#         except Exception as e:
-#             return render(request, template_name, {'error': str(e)})
-
-
-# def contact(request):
-#     return render(request, 'contact.html')
+    return render(request, template_name, {'form': form})

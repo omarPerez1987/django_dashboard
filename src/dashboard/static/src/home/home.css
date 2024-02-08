@@ -148,7 +148,7 @@
   margin-bottom: 1em;
   display: flex;
   flex-direction: row-reverse;
-  gap: 0.2em;
+  gap: 1.5em;
   font-size: 1.2rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -157,9 +157,11 @@
   outline: none;
   background: none;
   color: #bead8e;
-  width: 90%;
+  width: 100%;
+  cursor: pointer;
 }
 .check__container__box-input__input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
   filter: invert(100%) sepia(90%) saturate(1000%) brightness(95%) contrast(30%);
 }
 .check__button {

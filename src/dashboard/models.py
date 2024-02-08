@@ -39,7 +39,7 @@ class Booking(models.Model):
 class Contact(models.Model):
     photo = models.CharField(max_length=255)
     date = models.CharField(max_length=25)
-    hour = models.TimeField()
+    hour = models.CharField(max_length=8)
     name = models.CharField(max_length=25)
     last_name = models.CharField(max_length=25)
     email = models.EmailField(max_length=35)
@@ -50,9 +50,4 @@ class Contact(models.Model):
     def __str__(self):
         return f"contact {self.name}"
     
-
-
-
-
-
 
