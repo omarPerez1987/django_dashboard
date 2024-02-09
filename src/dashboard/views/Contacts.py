@@ -5,26 +5,22 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from datetime import datetime
 
-def contact_create(request, template_name='contact.html'):
+def contact_create(request):
     if request.method == 'POST':
-        try:
-            form = ContactForm(request.POST)
-            if form.is_valid():
-                contact = form.save(commit=False)
-                contact.photo = 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/857.jpg'
-                contact.date = datetime.now().strftime('%Y-%m-%d')
-                contact.hour = datetime.now().strftime('%H:%M:%S')
-                contact.archived = False
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.photo = 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/857.jpg'
+            contact.date = datetime.now().strftime('%Y-%m-%d')
+            contact.hour = datetime.now().strftime('%H:%M:%S')
+            contact.archived = False
 
-                contact.save()
-                messages.success(request, 'El formulario se ha enviado con éxito.')
-                return redirect('contacts')
-            else:
-                messages.error(request, 'No se ha podido enviar el formulario.')
-
-        except Exception as e:
-            return render(request, template_name, {'error': str(e)})
+            contact.save()
+            messages.success(request, 'El formulario se ha enviado con éxito.')
+            return redirect('contacts')
+        else:
+            messages.error(request, 'No se ha podido enviar el formulario.')
     else:
         form = ContactForm()
 
-    return render(request, template_name, {'form': form})
+    return render(request, 'contact.html', {'form': form})
