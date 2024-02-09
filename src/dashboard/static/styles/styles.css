@@ -2318,16 +2318,18 @@ ul {
 
 @media screen and (min-width: 1300px) {
   .info-check {
-    width: 100%;
     max-width: 1170px;
-    align-items: start;
+    margin-left: 5rem;
   }
   .info-check__container {
-    margin-top: 5em;
+    width: 100%;
     position: relative;
+    margin-top: 5em;
+    justify-content: start;
   }
   .info-check__container__text-and-img {
     padding-left: 0;
+    width: 100%;
   }
   .info-check__container__text-and-img__text {
     border: 1px solid #bead8e;
@@ -2340,7 +2342,7 @@ ul {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 80%;
   }
   .info-check__container__text-and-img__img {
     margin-top: -3em;
@@ -2352,7 +2354,7 @@ ul {
     width: 23.1em;
     position: absolute;
     top: -3em;
-    right: -5.5em;
+    right: 0;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -2579,8 +2581,8 @@ ul {
 }
 .related-rooms__box__image {
   width: 100%;
-  height: auto;
   max-width: 470px;
+  height: 313px;
   z-index: 0;
 }
 .related-rooms__box__text {
@@ -2689,6 +2691,10 @@ ul {
     align-items: start;
     margin-left: 15%;
     max-width: 1170px;
+  }
+  .related-rooms__box__image {
+    width: 470px;
+    height: 313px;
   }
 }
 .main-offers {
