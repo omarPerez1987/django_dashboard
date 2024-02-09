@@ -1,0 +1,23 @@
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    line-height: 20px;
+    padding: 25px;
+    width: 320px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    
+    &.success {
+        background-color: green;
+    }
+    &.error {
+        background-color: red;
+    }
+}

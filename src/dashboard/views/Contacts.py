@@ -15,10 +15,13 @@ def contact_create(request, template_name='contact.html'):
                 contact.date = datetime.now().strftime('%Y-%m-%d')
                 contact.hour = datetime.now().strftime('%H:%M:%S')
                 contact.archived = False
-                print(contact)
+
                 contact.save()
                 messages.success(request, 'El formulario se ha enviado con éxito.')
-                return redirect('home')
+                return redirect('contacts')
+            else:
+                messages.error(request, 'No se ha podido enviar el formulario.')
+
         except Exception as e:
             return render(request, template_name, {'error': str(e)})
     else:

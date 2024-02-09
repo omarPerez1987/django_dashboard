@@ -3444,6 +3444,28 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  line-height: 20px;
+  padding: 25px;
+  width: 320px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.message.success {
+  background-color: green;
+}
+.message.error {
+  background-color: red;
+}
+
 .swiperMinimal {
   padding-bottom: 2em;
   width: 100%;

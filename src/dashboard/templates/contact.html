@@ -155,6 +155,13 @@
       </article>
     </section>
 
+    {% if messages %} 
+    {% for message in messages %}
+    <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+      {{ message }}
+    </div>
+    {% endfor %} {% endif %}
+
     <section class="form-contact">
       <form class="form-contact__form" method="POST">
         {% csrf_token %}

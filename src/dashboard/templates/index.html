@@ -86,6 +86,14 @@
       </div>
     </main>
 
+    {% if messages %} 
+    {% for message in messages %}
+    <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+      {{ message }}
+    </div>
+    {% endfor %} 
+    {% endif %}
+
     <form class="check" method="GET" action="{% url 'rooms_list' %}">
       <div class="check__container">
         <label class="check__container__label">Arrival Date</label>
@@ -98,7 +106,7 @@
           />
         </div>
       </div>
-    
+
       <div class="check__container">
         <label class="check__container__label">Departure Date</label>
         <div class="check__container__box-input">
@@ -111,7 +119,7 @@
         </div>
       </div>
       <button class="check__button" type="submit">CHECK AVAILABILITY</button>
-    </form>    
+    </form>
 
     <section class="about">
       <article class="about__container">
