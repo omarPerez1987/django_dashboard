@@ -4,14 +4,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__container {
     width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
     &__text-and-img {
+      max-width: 48em;
+
       &__text {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 0.5em;
+
         &__subtitle {
           color: #777;
           font-family: $secondary-font;
@@ -52,6 +61,7 @@
       &__image {
         width: 100%;
         max-width: 48em;
+        margin: 0 auto;
       }
       &__image img {
         width: 100%;
@@ -148,6 +158,7 @@
       &__text-and-img {
         padding-left: 0;
         &__text {
+          border: 1px solid #bead8e;
           height: 9em;
           position: relative;
           background: #fff;

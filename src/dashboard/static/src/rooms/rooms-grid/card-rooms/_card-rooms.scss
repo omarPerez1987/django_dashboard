@@ -8,11 +8,13 @@
     width: 90%;
     margin-top: 3em;
     text-align: center;
+    border: 1px solid #bead8e;
+    padding-bottom: 2rem;
     
     &__image {
       width: 100%;
       height: auto;
-      max-width: 470px;
+      // max-width: 470px;
       z-index: 0;
     }
 
@@ -105,6 +107,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 
   &__rooms {
     margin-top: 2.5em;
@@ -140,12 +143,13 @@
     width: 90%;
     height: auto;
     position: relative;
-
+    padding: 0;
+    
     &__image {
       width: 40%;
       height: 300px;
     }
-
+    
     &__text {
       display: flex;
       flex-direction: column;
@@ -158,7 +162,7 @@
         width: 100%;
         margin: 0rem 0rem 1rem 0rem;
       }
-
+      
       &__title {
         margin: 0;
         text-align: start;
@@ -188,15 +192,17 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
 
     .rooms-grid {
       margin: 0 auto;
       padding-top: 7em;
-      max-width: 1170px;
+      width: auto;
       gap: 1.7em;
-
+      padding-bottom: 1rem;
+      
       &__box {
-        padding-bottom: 1.7em;
+        padding-bottom: 3em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -206,30 +212,30 @@
         min-height: 550px;
         text-align: center;
         box-shadow: 0px 8px 16px 0px rgba(73, 73, 73, 0.05);
-
+        
         &__image {
           width: 23em;
           max-height: 250px;
         }
-
+        
         &__text {
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 100%;
           padding-left: 0px;
-          margin-bottom: 1rem;
-
+          
           &__icons {
             margin-top: -2.5em;
           }
-
+          
           &__paragraph {
             text-align: center;
             width: 90%;
           }
         }
         &__box-price {
+          position: relative;
           width: 100%;
           display: flex;
           flex-direction: row;

@@ -85,7 +85,6 @@
 }
 .card-offers__box-image__image {
   z-index: 0;
-  position: relative;
   width: 100%;
   height: 162px;
   -o-object-fit: cover;
@@ -95,6 +94,9 @@
   margin-top: 1em;
   width: 90%;
   padding-left: 1.2em;
+}
+.card-offers__container__header-card {
+  position: relative;
 }
 .card-offers__container__header-card__box-title__subtitle {
   color: #777;
@@ -118,9 +120,9 @@
   letter-spacing: -1.44px;
 }
 .card-offers__container__header-card__box-price {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  top: -210px;
+  top: -5rem;
   width: 93%;
   display: flex;
   flex-direction: column;
@@ -166,9 +168,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-.card-offers__container__flex__description {
-  margin-top: -2.5em;
 }
 .card-offers__container__flex__description__paragraph {
   width: 90%;
@@ -243,6 +242,7 @@
     z-index: 1;
     background: #fff;
     border-top: 6px solid #bdac8d;
+    position: relative;
   }
   .card-offers__container__header-card {
     margin-bottom: -2em;
@@ -252,15 +252,15 @@
     border-bottom: 1px solid #ececec;
   }
   .card-offers__container__header-card__box-price {
-    top: -90px;
+    margin-top: 5.7rem;
   }
   .card-offers__container__flex {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
   .card-offers__container__flex__description {
-    margin-top: 0em;
     width: 31em;
   }
   .card-offers__container__flex__box-list {

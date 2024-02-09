@@ -8,6 +8,7 @@
     width: 90%;
     margin-top: 3em;
     text-align: center;
+    border: 1px solid $color-gold;
 
     &__image {
       width: 100%;
@@ -34,7 +35,7 @@
         z-index: 1;
       }
       &__title {
-        margin-top: 1.6em;
+        margin-top: 1em;
         color: #222;
         text-align: right;
         font-family: $primary-font;
@@ -62,6 +63,7 @@
       display: flex;
       justify-content: center;
       gap: 1.2em;
+      margin-bottom: 2rem;
       &__price {
         color: #bead8e;
         text-align: right;
@@ -143,6 +145,7 @@
       align-items: start;
       width: 50%;
       padding-left: 2em;
+      margin-bottom: 2rem;
 
       &__icons {
         width: 80%;

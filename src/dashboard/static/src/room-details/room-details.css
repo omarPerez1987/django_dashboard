@@ -11,8 +11,15 @@
 }
 .info-check__container {
   width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info-check__container__text-and-img {
+  max-width: 48em;
 }
 .info-check__container__text-and-img__text {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -57,6 +64,7 @@
 .info-check__container__text-and-img__image {
   width: 100%;
   max-width: 48em;
+  margin: 0 auto;
 }
 .info-check__container__text-and-img__image img {
   width: 100%;
@@ -151,6 +159,7 @@
     padding-left: 0;
   }
   .info-check__container__text-and-img__text {
+    border: 1px solid #bead8e;
     height: 9em;
     position: relative;
     background: #fff;
@@ -306,7 +315,7 @@
 @media screen and (min-width: 1000px) {
   .user {
     margin-left: 15%;
-    max-width: 100%;
+    width: auto;
     display: flex;
   }
   .user__box {
@@ -329,6 +338,7 @@
 .cancelation {
   margin-top: 6.5em;
   max-width: 48em;
+  margin-left: 2.8em;
 }
 .cancelation__title {
   padding-bottom: 0.5em;

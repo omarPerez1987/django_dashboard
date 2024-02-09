@@ -11,7 +11,6 @@ const swiper = new Swiper("#mySwiper", {
       slidesPerView: 3,
     },
   },
-  mousewheel: true,
   keyboard: true,
 });
 
@@ -105,7 +104,6 @@ const swiperRelatedRooms = new Swiper("#swiperRelatedRooms", {
       },
     },
   },
-  mousewheel: true,
   keyboard: true,
 });
 

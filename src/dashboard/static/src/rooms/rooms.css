@@ -77,11 +77,12 @@
   width: 90%;
   margin-top: 3em;
   text-align: center;
+  border: 1px solid #bead8e;
+  padding-bottom: 2rem;
 }
 .rooms-grid__box__image {
   width: 100%;
   height: auto;
-  max-width: 470px;
   z-index: 0;
 }
 .rooms-grid__box__text {
@@ -167,6 +168,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 .pagination__rooms {
   margin-top: 2.5em;
@@ -201,6 +203,7 @@
     width: 90%;
     height: auto;
     position: relative;
+    padding: 0;
   }
   .rooms-grid__box__image {
     width: 40%;
@@ -243,15 +246,17 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
   .container-rooms .rooms-grid {
     margin: 0 auto;
     padding-top: 7em;
-    max-width: 1170px;
+    width: auto;
     gap: 1.7em;
+    padding-bottom: 1rem;
   }
   .container-rooms .rooms-grid__box {
-    padding-bottom: 1.7em;
+    padding-bottom: 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -272,7 +277,6 @@
     align-items: center;
     width: 100%;
     padding-left: 0px;
-    margin-bottom: 1rem;
   }
   .container-rooms .rooms-grid__box__text__icons {
     margin-top: -2.5em;
@@ -282,6 +286,7 @@
     width: 90%;
   }
   .container-rooms .rooms-grid__box__box-price {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -368,6 +373,7 @@
   width: 90%;
   margin-top: 3em;
   text-align: center;
+  border: 1px solid #bead8e;
 }
 .rooms-list__box__image {
   width: 100%;
@@ -393,7 +399,7 @@
   z-index: 1;
 }
 .rooms-list__box__text__title {
-  margin-top: 1.6em;
+  margin-top: 1em;
   color: #222;
   text-align: right;
   font-family: "Old Standard TT", serif;
@@ -419,6 +425,7 @@
   display: flex;
   justify-content: center;
   gap: 1.2em;
+  margin-bottom: 2rem;
 }
 .rooms-list__box__box-price__price {
   color: #bead8e;
@@ -498,6 +505,7 @@
     align-items: start;
     width: 50%;
     padding-left: 2em;
+    margin-bottom: 2rem;
   }
   .rooms-list__box__text__icons {
     width: 80%;

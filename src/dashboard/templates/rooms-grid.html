@@ -86,7 +86,7 @@
     </section>
 
     <section class="container-rooms">
-      {% for room in rooms %}
+      {% for room in page_obj.object_list %}
       <article class="rooms-grid">
         <a href="{% url 'room_details' room.id %}" class="rooms-grid__box">
           <img class="rooms-grid__box__image" src="{{ room.photo }}" alt="" />
@@ -143,6 +143,36 @@
       </article>
       {% endfor %}
     </section>
+
+    <article class="pagination">
+      <div class="pagination__rooms">
+          {% if page_obj.has_previous %}
+              <button class="pagination__rooms__move" id="previous">
+                  <a href="?page=1">
+                      <img src="{% static 'public/icons/rooms/arrow-prev.svg' %}" alt="" />
+                  </a>
+              </button>
+          {% endif %}
+  
+          {% for page_num in page_obj.paginator.page_range %}
+              {% if page_obj.number == page_num %}
+                  <button class="pagination__rooms__page active-page " id="page{{ page_num }}">{{ page_num }}</button>
+              {% else %}
+                  <button class="pagination__rooms__page" id="page{{ page_num }}">
+                      <a href="?page={{ page_num }}">{{ page_num }}</a>
+                  </button>
+              {% endif %}
+          {% endfor %}
+  
+          {% if page_obj.has_next %}
+              <button class="pagination__rooms__move" id="next">
+                  <a href="?page={{ page_obj.paginator.num_pages }}">
+                      <img src="{% static 'public/icons/rooms/arrow-next.svg' %}" alt="" />
+                  </a>
+              </button>
+          {% endif %}
+      </div>
+    </article>
 
     <footer class="footer">
       <div class="footer__box">

@@ -83,7 +83,7 @@
 @media screen and (min-width: 1000px) {
   .user {
     margin-left: 15%;
-    max-width: 100%;
+    width: auto;
     display: flex;
 
     &__box {

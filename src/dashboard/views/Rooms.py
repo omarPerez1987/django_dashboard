@@ -1,18 +1,23 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import Http404
-from django.views import View
+from django.shortcuts import render
+from django.core.paginator import Paginator
 from dashboard.models import Room
 
 
 
 def rooms_get_all(request):
     rooms = Room.objects.all()
-    return render(request, 'rooms-grid.html', {'rooms': rooms})
+    paginator = Paginator(rooms, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'rooms-grid.html', {'page_obj': page_obj})
 
 
 def rooms_available(request):
     rooms = Room.objects.filter(status='available')
-    return render(request, 'rooms-list.html', {'rooms': rooms})
+    paginator = Paginator(rooms, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'rooms-list.html', {'page_obj': page_obj})
         
 
 def rooms_offers(request):

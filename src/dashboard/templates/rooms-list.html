@@ -84,7 +84,7 @@
         </div>
       </section>
       
-    {% for room in rooms %}
+    {% for room in page_obj.object_list %}
     <section class="rooms-list" id="cardRoomsSection">
       <article class="rooms-list__box" id="cardRoomsSectionBox">
         <img
@@ -147,20 +147,36 @@
     </section>
     {% endfor %}
 
-    <!-- <section class="pagination">
+    <article class="pagination">
       <div class="pagination__rooms">
-        <button class="pagination__rooms__move" id="previous">
-          <img src="{% static 'public/icons/rooms/arrow-prev.svg' %}" alt="" />
-        </button>
-        <button class="pagination__rooms__page" id="page1">1</button>
-        <button class="pagination__rooms__page" id="page2">2</button>
-        <button class="pagination__rooms__page" id="page3">3</button>
-        <button class="pagination__rooms__page" id="page4">...</button>
-        <button class="pagination__rooms__move" id="next">
-          <img src="{% static 'public/icons/rooms/arrow-next.svg' %}" alt="" />
-        </button>
+          {% if page_obj.has_previous %}
+              <button class="pagination__rooms__move" id="previous">
+                  <a href="?page=1">
+                      <img src="{% static 'public/icons/rooms/arrow-prev.svg' %}" alt="" />
+                  </a>
+              </button>
+          {% endif %}
+  
+          {% for page_num in page_obj.paginator.page_range %}
+              {% if page_obj.number == page_num %}
+                  <button class="pagination__rooms__page active-page " id="page{{ page_num }}">{{ page_num }}</button>
+              {% else %}
+                  <button class="pagination__rooms__page" id="page{{ page_num }}">
+                      <a href="?page={{ page_num }}">{{ page_num }}</a>
+                  </button>
+              {% endif %}
+          {% endfor %}
+  
+          {% if page_obj.has_next %}
+              <button class="pagination__rooms__move" id="next">
+                  <a href="?page={{ page_obj.paginator.num_pages }}">
+                      <img src="{% static 'public/icons/rooms/arrow-next.svg' %}" alt="" />
+                  </a>
+              </button>
+          {% endif %}
       </div>
-    </section> -->
+    </article>
+
 
     <footer class="footer">
       <div class="footer__box">
