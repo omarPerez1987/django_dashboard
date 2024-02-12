@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  // box-sizing: border-box;
 }
 
 :root {
@@ -28,6 +29,7 @@ $third-font: "Roboto", sans-serif;
 $color: #ffffff;
 
 @import "../src/header/header";
+@import "../src/login/login";
 @import "../src/home/home.scss";
 @import "../src/about/about.scss";
 @import "../src/rooms/rooms.scss";

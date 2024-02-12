@@ -81,7 +81,7 @@ $color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     &__mini-title {
       width: 85%;
       text-align: start;
@@ -102,14 +102,14 @@ $color: #ffffff;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       transform: translateY(0);
-      transition: transform 0.5s ease;
-
+      transition: transform 0.5s ease;      
       &__left {
+        
         &__logo__H {
           padding: 0.3em 0.5em;
           font-size: 2.5rem;
         }
-
+        
         &__logo__name {
           margin-left: 1em;
           font-size: 1.6rem;
@@ -117,19 +117,19 @@ $color: #ffffff;
             font-weight: 400;
           }
         }
-
+        
         &__menu {
-          display: none;
+            display: none;
         }
       }
-
+      
       &__icons {
         padding: 1em 2em;
         margin-right: 0em;
         display: flex;
-        justify-content: center;
+        justify-content: end;
       }
-
+      
       &__icons img {
         width: 1.5em;
         padding: 1em;

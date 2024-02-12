@@ -128,7 +128,7 @@ ul {
     padding: 1em 2em;
     margin-right: 0em;
     display: flex;
-    justify-content: center;
+    justify-content: end;
   }
   .header-box__header__icons img {
     width: 1.5em;
@@ -136,6 +136,88 @@ ul {
     border: 2px solid rgba(133, 133, 133, 0.3);
   }
 }
+.main-login {
+  max-width: 100%;
+  height: 33.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.main-login__card {
+  text-align: center;
+  width: auto;
+  max-width: 90%;
+  padding: 2rem;
+  border: 1px solid #bead8e;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+  background-color: #fff;
+  color: #777;
+}
+.main-login__card h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+.main-login__card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-login__card button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin: 1rem 0rem;
+  background-color: #bead8e;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.main-login__card button:hover {
+  background-color: #ab966e;
+}
+.main-login__card p {
+  margin-top: 1rem;
+}
+.main-login__card a {
+  color: #777;
+  text-decoration: none;
+}
+.main-login__card a:hover {
+  text-decoration: underline;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+}
+.form-register p span {
+  display: none;
+}
+.form-register ul {
+  display: none;
+}
+.form-register button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin: 1rem 0rem;
+  background-color: #bead8e;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.form-register button:hover {
+  background-color: #ab966e;
+}
+.form-register button__return {
+  text-align: center;
+}
+
 .navbar {
   margin-top: 4.4em;
   position: absolute;
@@ -160,13 +242,13 @@ ul {
 @media screen and (min-width: 1000px) {
   .navbar {
     margin-top: 0em;
-    width: auto;
+    width: 100%;
     position: static;
     display: flex;
     height: auto;
     flex-direction: row;
     background: none;
-    justify-content: start;
+    justify-content: center;
   }
   .navbar__links {
     color: #111;

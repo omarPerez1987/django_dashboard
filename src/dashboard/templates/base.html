@@ -61,14 +61,12 @@
         </nav>
 
         <div class="header-box__header__icons">
-          <img
-            src="{% static 'public/icons/header/user.png' %}"
-            class="header-box__header__icons__icon"
-          />
-          <img
-            src="{% static 'public/icons/header/search.png' %}"
-            class="header-box__header__icons__icon"
-          />
+          <a class="header-box__header__icons__user" href="{% url 'login' %}">
+            <img
+              src="{% static 'public/icons/header/user.png' %}"
+              class="header-box__header__icons__icon"
+            />
+          </a>
         </div>
       </header>
     </section>

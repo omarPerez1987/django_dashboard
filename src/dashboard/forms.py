@@ -1,6 +1,8 @@
 from django import forms
 from dashboard.models import *
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from dashboard.models import Contact
 from dashboard.models import Booking
 
@@ -26,3 +28,20 @@ class BookingForm(forms.ModelForm):
             'checkout': forms.DateInput(attrs={'class':'info-check__container__check__form__input','type': 'date'}),
             'notes': forms.Textarea(attrs={'class': 'info-check__container__check__form__textarea', 'cols': 30, 'rows': 10, 'placeholder': 'Your message'})
         }
+
+class UserForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=True)
+    last_name = forms.CharField(max_length=30, required=True)
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+        # widgets = {
+        #     'username': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your username'}),
+        #     'first_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your name'}),
+        #     'last_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your last name'}),
+        #     'email': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your email'}),
+        #     'password1': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your password'}),
+        #     'password2': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Confirm password'}),
+        # }
