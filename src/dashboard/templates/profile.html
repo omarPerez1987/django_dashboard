@@ -11,6 +11,12 @@
         
         <p><a href="{% url 'password_change' %}">Change password</a></p>
         
+        <h3>Orders</h3>
+        <ul>
+            <li><a href="{% url 'order_list' %}">View Orders</a></li>
+            <li><a href="{% url 'order_create' %}">Create Order</a></li>
+        </ul>
+        
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit">Logout</button>

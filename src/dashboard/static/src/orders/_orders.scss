@@ -1,0 +1,71 @@
+.main-orders {
+    margin: 0 auto;
+    max-width: 90%;
+    height: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $third-font;
+  
+    &__card {
+      justify-content: center;
+      padding: 1rem;
+      border: 1px solid #bead8e;
+      border-radius: 10px;
+      box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+      max-width: 500px;
+  
+      & h2 {
+        text-align: center;
+      }
+  
+      .form-orders {
+        display: flex;
+        flex-direction: column;
+        color: #777;
+  
+        & p {
+          margin-top: 1rem;
+          text-align: start;
+        }
+        & input {
+          width: 100%;
+          margin-top: 0.5em;
+          height: 3.7em;
+          background: #f8f8f8;
+          border: none;
+        }
+  
+        & p span {
+          display: none;
+        }
+  
+        & ul {
+          display: none;
+        }
+        & button {
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          margin: 1rem 0rem;
+          background-color: #bead8e;
+          color: #ffffff;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+  
+          &:hover {
+            background-color: darken(#bead8e, 10%);
+          }
+        }
+        &__return {
+          text-align: center;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

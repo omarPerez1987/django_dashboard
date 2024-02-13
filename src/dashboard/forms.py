@@ -41,7 +41,7 @@ class UserForm(UserCreationForm):
         #     'username': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your username'}),
         #     'first_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your name'}),
         #     'last_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your last name'}),
-        #     'email': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your email'}),
-        #     'password1': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your password'}),
-        #     'password2': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Confirm password'}),
+        #     'email': forms.EmailInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your email'}),
+        #     'password1': forms.PasswordInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your password'}),
+        #     'password2': forms.PasswordInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Confirm password'}),
         # }

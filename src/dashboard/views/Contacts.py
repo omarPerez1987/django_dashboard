@@ -11,10 +11,9 @@ def contact_create(request):
         if form.is_valid():
             contact = form.save(commit=False)
             contact.photo = 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/857.jpg'
-            contact.date = datetime.now().strftime('%Y-%m-%d')
-            contact.hour = datetime.now().strftime('%H:%M:%S')
+            contact.date = datetime.now().strftime('%Y-%m-%d')[:10]
+            contact.hour = datetime.now().strftime('%H:%M:%S')[:8]
             contact.archived = False
-
             contact.save()
             messages.success(request, 'El formulario se ha enviado con éxito.')
             return redirect('contacts')

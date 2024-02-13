@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="main-orders">
+    <article class="main-orders__card">
+    <h2>My Orders</h2>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.id }} - {{ order.description }}</li>
+        {% empty %}
+            <li>No orders yet.</li>
+        {% endfor %}
+    </ul>
+    </article>
+</section>
+{% endblock %}

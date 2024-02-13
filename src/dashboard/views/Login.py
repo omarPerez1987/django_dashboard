@@ -6,7 +6,7 @@ from django.views import generic
 from django.contrib.auth.views import LoginView
 from django.shortcuts import redirect
 
-class CustomLoginView(LoginView):
+class Login(LoginView):
     template_name = 'registration/login.html'
 
     def dispatch(self, request, *args, **kwargs):

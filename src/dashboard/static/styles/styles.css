@@ -138,7 +138,7 @@ ul {
 }
 .main-login {
   max-width: 100%;
-  height: 33.2em;
+  height: 40em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,6 +165,17 @@ ul {
   flex-direction: column;
   align-items: center;
 }
+.main-login__card p {
+  margin-top: 1rem;
+  text-align: start;
+}
+.main-login__card input {
+  width: 100%;
+  margin-top: 0.5em;
+  height: 3.7em;
+  background: #f8f8f8;
+  border: none;
+}
 .main-login__card button {
   width: 100%;
   padding: 1rem;
@@ -190,17 +201,50 @@ ul {
   text-decoration: underline;
 }
 
-.form-register {
+.main-signup {
+  margin: 0 auto;
+  max-width: 90%;
+  height: 60em;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
-.form-register p span {
+.main-signup__card {
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #bead8e;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+  max-width: 500px;
+}
+.main-signup__card h2 {
+  text-align: center;
+}
+.main-signup__card .form-register {
+  display: flex;
+  flex-direction: column;
+  color: #777;
+}
+.main-signup__card .form-register p {
+  margin-top: 1rem;
+  text-align: start;
+}
+.main-signup__card .form-register input {
+  width: 100%;
+  margin-top: 0.5em;
+  height: 3.7em;
+  background: #f8f8f8;
+  border: none;
+}
+.main-signup__card .form-register p span {
   display: none;
 }
-.form-register ul {
+.main-signup__card .form-register ul {
   display: none;
 }
-.form-register button {
+.main-signup__card .form-register button {
   width: 100%;
   padding: 1rem;
   border: none;
@@ -211,11 +255,14 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.form-register button:hover {
+.main-signup__card .form-register button:hover {
   background-color: #ab966e;
 }
-.form-register button__return {
+.main-signup__card .form-register__return {
   text-align: center;
+}
+.main-signup__card .form-register__return:hover {
+  text-decoration: underline;
 }
 
 .navbar {
@@ -3555,6 +3602,70 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.main-orders {
+  margin: 0 auto;
+  max-width: 90%;
+  height: 60em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.main-orders__card {
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #bead8e;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+  max-width: 500px;
+}
+.main-orders__card h2 {
+  text-align: center;
+}
+.main-orders__card .form-orders {
+  display: flex;
+  flex-direction: column;
+  color: #777;
+}
+.main-orders__card .form-orders p {
+  margin-top: 1rem;
+  text-align: start;
+}
+.main-orders__card .form-orders input {
+  width: 100%;
+  margin-top: 0.5em;
+  height: 3.7em;
+  background: #f8f8f8;
+  border: none;
+}
+.main-orders__card .form-orders p span {
+  display: none;
+}
+.main-orders__card .form-orders ul {
+  display: none;
+}
+.main-orders__card .form-orders button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin: 1rem 0rem;
+  background-color: #bead8e;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.main-orders__card .form-orders button:hover {
+  background-color: #ab966e;
+}
+.main-orders__card .form-orders__return {
+  text-align: center;
+}
+.main-orders__card .form-orders__return:hover {
+  text-decoration: underline;
+}
+
 .message {
   position: absolute;
   top: 50%;
