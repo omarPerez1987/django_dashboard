@@ -64,7 +64,7 @@ class Order(models.Model):
 
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    room_id = models.IntegerField()
+    room_id = models.ForeignKey(Room, on_delete=models.CASCADE, db_column='room_id')
     type = models.CharField(max_length=2, choices=TYPE_CHOICES)
     description = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)

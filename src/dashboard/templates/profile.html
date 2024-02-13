@@ -1,26 +1,29 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="main-profile">
+  <article class="main-profile__article">
+    <h2 class="main-profile__article__title">User Profile</h2>
+    <div class="profile-info">
+      <p>Username: <span>{{ user.username }}</span></p>
+      <p>Name: <span>{{ user.first_name }} {{ user.last_name }}</span></p>
+      <p>Email: <span>{{ user.email }}</span></p>
+      <p>Date creation: <span>{{user.date_joined}}</span></p>
+    </div>
 
-{% block content %}
-<section class="main-login">
-    <article class="main-login__card">
-        <h2>User Profile</h2>
-        <p>Username: {{ user.username }}</p>
-        <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
-        <p>Email: {{ user.email }}</p>
-        
-        <p><a href="{% url 'password_change' %}">Change password</a></p>
-        
-        <h3>Orders</h3>
-        <ul>
-            <li><a href="{% url 'order_list' %}">View Orders</a></li>
-            <li><a href="{% url 'order_create' %}">Create Order</a></li>
-        </ul>
-        
-        <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
-    </article>
+    <div class="profile-orders">
+      <h3>Orders</h3>
+      <ul>
+        <li><a href="{% url 'order_list' %}">View Orders</a></li>
+        <li><a href="{% url 'order_create' %}">Create Order</a></li>
+      </ul>
+    </div>
+
+    <div class="profile-form">
+      <p><a href="{% url 'password_change' %}">Change password</a></p>
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+      </form>
+    </div>
+  </article>
 </section>
 {% endblock %}

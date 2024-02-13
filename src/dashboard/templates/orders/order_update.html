@@ -1,13 +1,14 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <section class="main-orders">
-    <article class="main-orders__card">
+  <article class="main-orders__create card-orders">
     <h2>Update Order</h2>
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update</button>
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Update</button>
     </form>
-    </article>
+    <button>
+      <a href="{% url 'profile' %}">Return to profile</a>
+    </button>
+  </article>
 </section>
 {% endblock %}

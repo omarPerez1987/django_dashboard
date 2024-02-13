@@ -19,6 +19,8 @@ class OrderCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        room_id = form.cleaned_data['room_id']
+        form.instance.room_id = room_id
         return super().form_valid(form)
 
 class OrderUpdateView(LoginRequiredMixin, UpdateView):

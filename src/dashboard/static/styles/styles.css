@@ -265,6 +265,82 @@ ul {
   text-decoration: underline;
 }
 
+.main-profile {
+  max-width: 100%;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.main-profile__article {
+  min-width: 300px;
+  width: auto;
+  max-width: 780px;
+  padding: 2rem;
+  border: 1px solid #bead8e;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+  background-color: #fff;
+  color: #777;
+}
+.main-profile__article__title {
+  margin-bottom: 1rem;
+  color: #333;
+}
+.main-profile__article .profile-info p {
+  text-align: start;
+  color: #333;
+  display: flex;
+  gap: 1rem;
+}
+.main-profile__article .profile-info span {
+  color: #777;
+}
+.main-profile__article .profile-orders {
+  margin: 3rem 0rem;
+}
+.main-profile__article .profile-orders h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.main-profile__article .profile-orders ul li {
+  margin-top: 0.3rem;
+  color: white;
+  padding: 0.5rem;
+  background-color: #bead8e;
+}
+.main-profile__article .profile-orders ul li:hover {
+  background-color: #ab966e;
+}
+.main-profile__article .profile-form a {
+  color: #777;
+  text-decoration: none;
+}
+.main-profile__article .profile-form a:hover {
+  text-decoration: underline;
+}
+.main-profile__article .profile-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-profile__article .profile-form form button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin: 1rem 0rem;
+  background-color: #bead8e;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.main-profile__article .profile-form form button:hover {
+  background-color: #ab966e;
+}
+
 .navbar {
   margin-top: 4.4em;
   position: absolute;
@@ -3612,40 +3688,27 @@ ul {
   justify-content: center;
   font-family: "Roboto", sans-serif;
 }
-.main-orders__card {
-  justify-content: center;
-  padding: 1rem;
-  border: 1px solid #bead8e;
-  border-radius: 10px;
-  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
-  max-width: 500px;
-}
-.main-orders__card h2 {
+.main-orders__create h2, .main-orders__list h2 {
   text-align: center;
+  margin-bottom: 2rem;
 }
-.main-orders__card .form-orders {
-  display: flex;
-  flex-direction: column;
-  color: #777;
+.main-orders__create label, .main-orders__list label {
+  font-weight: bolder;
 }
-.main-orders__card .form-orders p {
-  margin-top: 1rem;
-  text-align: start;
-}
-.main-orders__card .form-orders input {
+.main-orders__create select, .main-orders__list select {
   width: 100%;
-  margin-top: 0.5em;
+  margin-bottom: 1rem;
+  width: 100%;
   height: 3.7em;
   background: #f8f8f8;
   border: none;
 }
-.main-orders__card .form-orders p span {
-  display: none;
+.main-orders__create textarea, .main-orders__list textarea {
+  width: 100%;
+  background: #f8f8f8;
+  border: none;
 }
-.main-orders__card .form-orders ul {
-  display: none;
-}
-.main-orders__card .form-orders button {
+.main-orders__create button, .main-orders__list button {
   width: 100%;
   padding: 1rem;
   border: none;
@@ -3656,14 +3719,55 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.main-orders__card .form-orders button:hover {
+.main-orders__create button:hover, .main-orders__list button:hover {
   background-color: #ab966e;
 }
-.main-orders__card .form-orders__return {
-  text-align: center;
+.main-orders__create__box, .main-orders__list__box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bead8e;
 }
-.main-orders__card .form-orders__return:hover {
-  text-decoration: underline;
+.main-orders__create__box h3, .main-orders__list__box h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.main-orders__create__box__date, .main-orders__list__box__date {
+  color: grey;
+  font-size: small;
+}
+.main-orders__create__box__text, .main-orders__list__box__text {
+  margin-top: 1rem;
+  min-height: 3rem;
+  height: auto;
+}
+.main-orders__create__box__actions, .main-orders__list__box__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0rem;
+}
+.main-orders__create__box__actions img, .main-orders__list__box__actions img {
+  width: 20px;
+  border: 1px solid transparent;
+}
+.main-orders__create__box__actions img:hover, .main-orders__list__box__actions img:hover {
+  border: 1px solid #bead8e;
+}
+
+.card-orders {
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #bead8e;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.219);
+  max-width: 500px;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .message {

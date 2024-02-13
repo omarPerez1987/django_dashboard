@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('accounts/profile/', login_required(UserProfileView.as_view()), name='profile'),
 
-     path('orders/', OrderListView.as_view(template_name='orders/order_list.html'), name='order_list'),
+    path('orders/', OrderListView.as_view(template_name='orders/order_list.html'), name='order_list'),
     path('orders/create/', OrderCreateView.as_view(template_name='orders/order_form.html'), name='order_create'),
     path('orders/<int:pk>/update/', OrderUpdateView.as_view(template_name='orders/order_update.html'), name='order_update'),
     path('orders/<int:pk>/delete/', OrderDeleteView.as_view(template_name='orders/order_delete.html'), name='order_delete'),

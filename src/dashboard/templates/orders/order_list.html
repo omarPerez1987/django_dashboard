@@ -1,15 +1,33 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <section class="main-orders">
-    <article class="main-orders__card">
+  <article class="main-orders__list card-orders order-list">
     <h2>My Orders</h2>
-    <ul>
-        {% for order in orders %}
-            <li>{{ order.id }} - {{ order.description }}</li>
-        {% empty %}
-            <li>No orders yet.</li>
-        {% endfor %}
-    </ul>
-    </article>
+    {% for order in orders %}
+    <div class="main-orders__list__box">
+      <h3>
+        Order:
+        <p class="main-orders__list__box__date"> {{order.timestamp}} </p>
+      </h3>
+      <div class="main-orders__list__box__text">
+        {{ order.description }}
+      </div>
+      <div class="main-orders__list__box__actions">
+        <a href="{% url 'order_update' order.id %}">
+          <img src="../../static/public/icons/order/icons8-editar-24.png" />
+        </a>
+        <a href="{% url 'order_delete' order.id %}">
+          <img src="../../static/public/icons/order/icons8-eliminar-30.png" />
+        </a>
+      </div>
+    </div>
+
+    {% empty %}
+    <li>No orders yet.</li>
+    {% endfor %}
+
+    <button>
+      <a href="{% url 'profile' %}">Return to profile</a>
+    </button>
+  </article>
 </section>
 {% endblock %}
