@@ -37,11 +37,3 @@ class UserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
-        # widgets = {
-        #     'username': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your username'}),
-        #     'first_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your name'}),
-        #     'last_name': forms.TextInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your last name'}),
-        #     'email': forms.EmailInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your email'}),
-        #     'password1': forms.PasswordInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Your password'}),
-        #     'password2': forms.PasswordInput(attrs={'class':'info-check__container__check__form__input', 'placeholder': 'Confirm password'}),
-        # }
