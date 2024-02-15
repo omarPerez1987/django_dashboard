@@ -1,10 +1,10 @@
 from django import forms
-from dashboard.models import *
+from website.models import *
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from dashboard.models import Contact
-from dashboard.models import Booking
+from website.models import Contact
+from website.models import Booking
 
 class ContactForm(forms.ModelForm):
     class Meta:

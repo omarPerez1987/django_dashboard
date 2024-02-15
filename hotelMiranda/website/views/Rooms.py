@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from dashboard.models import Room
+from website.models import Room
 
 
 

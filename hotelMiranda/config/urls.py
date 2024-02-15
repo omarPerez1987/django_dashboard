@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views
-from dashboard.views.Bookings import post_form_and_get_details
-from dashboard.views.Contacts import *
-from dashboard.views.Rooms import *
-from dashboard.views.render_html import *
-from dashboard.views.Login import *
-from dashboard.views.Profile import *
-from dashboard.views.Orders import *
+from website.views.Bookings import post_form_and_get_details
+from website.views.Contacts import *
+from website.views.Rooms import *
+from website.views.render_html import *
+from website.views.Login import *
+from website.views.Profile import *
+from website.views.Orders import *
 
 
 urlpatterns = [

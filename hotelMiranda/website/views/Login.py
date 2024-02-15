@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from dashboard.forms import UserForm
+from website.forms import UserForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.views import LoginView

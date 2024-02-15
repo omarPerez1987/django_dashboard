@@ -1,7 +1,7 @@
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from dashboard.models import Order
+from website.models import Order
 
 class OrderListView(LoginRequiredMixin, ListView):
     model = Order

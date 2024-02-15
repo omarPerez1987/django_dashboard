@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from dashboard.models import *
-from dashboard.forms import *
+from website.models import *
+from website.forms import *
 from django.contrib import messages 
 from django.shortcuts import redirect
 from datetime import datetime
