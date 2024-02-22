@@ -37,5 +37,3 @@ jobs:
             sudo systemctl restart nginx
             cd hotelMiranda
             sudo /home/ubuntu/env/bin/python3 manage.py collectstatic --no-input
-
-
