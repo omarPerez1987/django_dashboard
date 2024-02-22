@@ -30,6 +30,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
             cd django_dashboard
             git pull origin main
             pip install -r requirements.txt
