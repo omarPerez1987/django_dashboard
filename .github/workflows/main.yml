@@ -23,14 +23,13 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run commands on the server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: garygrossgarten/github-action-scp@releas
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
             cd django_dashboard
             git pull origin main
             pip install -r requirements.txt
