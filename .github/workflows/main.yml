@@ -29,13 +29,13 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-        run: |
-          cd django_dashboard
-          git pull origin main
-          pip install -r requirements.txt
-          sudo systemctl restart gunicorn
-          sudo systemctl restart nginx
-          sudo /home/ubuntu/env/bin/python3 manage.py collectstatic
+          script: |
+            cd django_dashboard
+            git pull origin main
+            pip install -r requirements.txt
+            sudo systemctl restart gunicorn
+            sudo systemctl restart nginx
+            sudo /home/ubuntu/env/bin/python3 manage.py collectstatic
       
       # - name: Set up environment variables
       #   env:
