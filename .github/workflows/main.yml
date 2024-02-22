@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run commands on the server
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -43,3 +43,4 @@ jobs:
       #     SQL_USER: ${{ secrets.SQL_USER }}
       #     SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
       #     SQL_DATABASE: ${{ secrets.SQL_DATABASE }}
+
