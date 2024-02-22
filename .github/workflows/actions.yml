@@ -35,10 +35,9 @@ jobs:
             sudo systemctl restart gunicorn
             sudo systemctl restart nginx
       
-      - name: Set up environment variables
-        env:
-          SQL_HOST: ${{ secrets.SQL_HOST }}
-          SQL_USER: ${{ secrets.SQL_USER }}
-          SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
-          SQL_DATABASE: ${{ secrets.SQL_DATABASE }}
-
+      # - name: Set up environment variables
+      #   env:
+      #     SQL_HOST: ${{ secrets.SQL_HOST }}
+      #     SQL_USER: ${{ secrets.SQL_USER }}
+      #     SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
+      #     SQL_DATABASE: ${{ secrets.SQL_DATABASE }}
