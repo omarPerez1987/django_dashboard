@@ -36,7 +36,7 @@ jobs:
             sudo systemctl restart gunicorn
             sudo systemctl restart nginx
             cd hotelMiranda
-            sudo /home/ubuntu/env/bin/python3 manage.py collectstatic
+            sudo /home/ubuntu/env/bin/python3 manage.py collectstatic --no-input
       
       # - name: Set up environment variables
       #   env:
@@ -44,5 +44,6 @@ jobs:
       #     SQL_USER: ${{ secrets.SQL_USER }}
       #     SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
       #     SQL_DATABASE: ${{ secrets.SQL_DATABASE }}
+
 
 
