@@ -35,6 +35,7 @@ jobs:
             pip install -r requirements.txt
             sudo systemctl restart gunicorn
             sudo systemctl restart nginx
+            cd hotelMiranda
             sudo /home/ubuntu/env/bin/python3 manage.py collectstatic
       
       # - name: Set up environment variables
