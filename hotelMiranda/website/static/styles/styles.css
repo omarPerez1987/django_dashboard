@@ -238,12 +238,6 @@ ul {
   background: #f8f8f8;
   border: none;
 }
-.main-signup__card .form-register p span {
-  display: none;
-}
-.main-signup__card .form-register ul {
-  display: none;
-}
 .main-signup__card .form-register button {
   width: 100%;
   padding: 1rem;
